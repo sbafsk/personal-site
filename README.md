@@ -1,36 +1,298 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Sebastián Pereira Rivero - Personal Site
 
-## Getting Started
+**Senior Full Stack Developer** with 7+ years of experience building and scaling modern web applications.
 
-First, run the development server:
+## ✨ **Features**
 
+### **Professional Showcase**
+- **Complete Career Timeline** - From Asignet (2016) to Mimiquate (2024)
+- **Skills & Expertise** - Frontend, Backend, AI & Automation, Cloud & DevOps
+- **Education Journey** - IT Business Management Diploma (Completed 2025)
+- **Interactive Contact Form** - Professional communication channel
+- **Responsive Design** - Mobile-first approach with Tailwind CSS
+
+### **Technical Excellence**
+- **Next.js 15** - Latest React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling with design system
+- **Accessibility First** - WCAG 2.1 AA compliant
+- **Performance Optimized** - Core Web Vitals optimized
+
+## 🎨 **Design System**
+
+### **Accessibility Standards**
+- **WCAG 2.1 AA Compliance** - Full accessibility implementation
+- **ARIA Support** - Complete screen reader compatibility
+- **Keyboard Navigation** - Enhanced focus management
+- **Touch Targets** - Minimum 44px for mobile usability
+- **Color Contrast** - WCAG AA compliant color combinations
+
+### **UI/UX Features**
+- **Visual Hierarchy** - Clear information architecture
+- **Responsive Design** - Mobile-first responsive layouts
+- **Interactive Elements** - Enhanced hover and focus states
+- **Smooth Transitions** - CSS-based animations
+- **Professional Typography** - Inter font with proper scaling
+
+## 🛠️ **Technology Stack**
+
+### **Frontend**
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Hooks** - Modern state management
+
+### **Development Tools**
+- **ESLint** - Code quality and consistency
+- **Prettier** - Code formatting
+- **Git** - Version control
+- **npm** - Package management
+
+### **Deployment**
+- **Vercel** - Recommended hosting platform
+- **Static Generation** - Optimized for performance
+- **CDN** - Global content delivery
+
+## 📱 **Responsive Design**
+
+### **Breakpoints**
+- **Mobile**: `< 640px` - Single column layout
+- **Tablet**: `640px - 1024px` - Two column layout
+- **Desktop**: `> 1024px` - Multi-column layout
+
+### **Mobile Features**
+- **Touch-Friendly** - 44px minimum touch targets
+- **Mobile Navigation** - Hamburger menu with accessibility
+- **Optimized Typography** - Readable on all screen sizes
+- **Performance** - Optimized for mobile networks
+
+## ♿ **Accessibility Features**
+
+### **Screen Reader Support**
+- **Semantic HTML** - Proper document structure
+- **ARIA Labels** - Enhanced screen reader experience
+- **Skip Links** - Keyboard navigation shortcuts
+- **Form Instructions** - Clear field descriptions
+
+### **Keyboard Navigation**
+- **Focus Management** - Visible focus indicators
+- **Tab Order** - Logical navigation flow
+- **Shortcuts** - Skip to main content
+- **Interactive Elements** - All accessible via keyboard
+
+## 🚀 **Getting Started**
+
+### **Prerequisites**
+- Node.js 18+ 
+- npm or yarn
+- Git
+
+### **Installation**
 ```bash
+# Clone the repository
+git clone [repository-url]
+cd personal-site
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **Development Commands**
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run start    # Start production server
+npm run lint     # Run ESLint
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 **Project Structure**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+personal-site/
+├── src/
+│   ├── app/                 # Next.js App Router
+│   │   ├── components/      # Reusable components
+│   │   ├── globals.css      # Global styles
+│   │   ├── layout.tsx       # Root layout
+│   │   └── page.tsx         # Homepage
+│   └── ...
+├── docs/                    # Documentation
+│   ├── new_cv.md           # Current CV
+│   ├── cover_letter.md      # Cover letter template
+│   ├── content.md           # Content guidelines
+│   └── style-guide.md       # Design system guide
+├── standards/               # Development standards
+│   └── ui.md               # UI/UX standards
+├── public/                  # Static assets
+├── package.json             # Dependencies
+└── README.md               # This file
+```
 
-## Learn More
+## 🎯 **Content Sections**
 
-To learn more about Next.js, take a look at the following resources:
+### **Hero Section**
+- Professional introduction
+- Call-to-action buttons
+- Contact information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **About Section**
+- Professional summary
+- Career highlights
+- Current status
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### **Skills Section**
+- Frontend technologies
+- Backend & APIs
+- AI & Automation
+- Cloud & DevOps
+- Databases
 
-## Deploy on Vercel
+### **Experience Section**
+- Complete career timeline
+- Role descriptions
+- Key achievements
+- Technologies used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### **Education Section**
+- IT Business Management Diploma
+- Programmer Analyst degree
+- IT High School background
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### **Languages Section**
+- Spanish (Native)
+- English (C1 Advanced)
+
+### **Photos Section**
+- Professional life showcase
+- Technology focus
+- Personal interests
+
+### **Contact Section**
+- Interactive contact form
+- Contact information
+- Professional links
+
+## 🔧 **Customization**
+
+### **Content Updates**
+- Edit `src/app/page.tsx` for main content
+- Update `docs/new_cv.md` for CV changes
+- Modify `docs/cover_letter.md` for letter updates
+
+### **Styling Changes**
+- Modify `src/app/globals.css` for global styles
+- Update Tailwind classes in components
+- Refer to `docs/style-guide.md` for design system
+
+### **Component Modifications**
+- Edit components in `src/app/components/`
+- Follow accessibility guidelines in `standards/ui.md`
+- Maintain consistency with design system
+
+## 📊 **Performance Metrics**
+
+### **Core Web Vitals**
+- **LCP** (Largest Contentful Paint): Optimized for fast loading
+- **FID** (First Input Delay): Responsive interactions
+- **CLS** (Cumulative Layout Shift): Stable layouts
+
+### **Optimization Features**
+- **Code Splitting** - Automatic Next.js optimization
+- **Image Optimization** - Next.js Image component
+- **CSS Purging** - Tailwind CSS optimization
+- **Static Generation** - Pre-rendered pages
+
+## 🧪 **Testing**
+
+### **Accessibility Testing**
+- **Screen Readers** - NVDA, JAWS, VoiceOver
+- **Keyboard Navigation** - Tab order and focus management
+- **Color Contrast** - WCAG AA compliance
+- **Touch Targets** - Mobile usability
+
+### **Performance Testing**
+- **Lighthouse** - Performance and accessibility auditing
+- **Browser DevTools** - Responsive design testing
+- **Mobile Testing** - Device and orientation testing
+- **Cross-Browser** - Chrome, Firefox, Safari, Edge
+
+## 📈 **Analytics & Monitoring**
+
+### **Recommended Tools**
+- **Vercel Analytics** - Built-in performance monitoring
+- **Google Analytics** - User behavior tracking
+- **Hotjar** - User experience insights
+- **Lighthouse CI** - Automated performance monitoring
+
+## 🚀 **Deployment**
+
+### **Vercel (Recommended)**
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+
+# Production deployment
+vercel --prod
+```
+
+### **Other Platforms**
+- **Netlify** - Static site hosting
+- **AWS S3** - Cloud hosting
+- **GitHub Pages** - Free hosting for open source
+
+## 🤝 **Contributing**
+
+### **Development Standards**
+- Follow accessibility guidelines in `standards/ui.md`
+- Maintain design system consistency
+- Test across devices and browsers
+- Ensure WCAG 2.1 AA compliance
+
+### **Code Quality**
+- Use TypeScript for type safety
+- Follow ESLint configuration
+- Maintain component documentation
+- Update style guide for new patterns
+
+## 📚 **Documentation**
+
+### **Key Documents**
+- **`docs/style-guide.md`** - Complete design system
+- **`standards/ui.md`** - UI/UX standards and compliance
+- **`docs/new_cv.md`** - Current professional CV
+- **`docs/cover_letter.md`** - Cover letter template
+
+### **Standards Reference**
+- **WCAG 2.1 AA** - Accessibility compliance
+- **Tailwind CSS** - Utility-first styling
+- **Next.js 15** - React framework features
+- **TypeScript** - Type-safe development
+
+## 📞 **Contact**
+
+- **Email**: spereirarivero93@gmail.com
+- **Phone**: +598 98 900 649
+- **LinkedIn**: [Sebastián Pereira Rivero](https://www.linkedin.com/in/sebastian-pereira-rivero/)
+- **Location**: Montevideo, Uruguay
+
+## 📄 **License**
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+**Built with ❤️ using Next.js, TypeScript, and TailwindCSS**
+
+*Last updated: September 2025*
