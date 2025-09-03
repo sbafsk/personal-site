@@ -4,7 +4,7 @@ import { getProfile } from "../../../lib/data-loader"
 
 export function AboutSection() {
     const profile = getProfile()
-    
+
     return (
         <Section id="about" ariaLabelledby="about-heading">
             <SectionHeader
