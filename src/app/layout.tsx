@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -29,7 +30,7 @@ export default function RootLayout({
         <a href="#main-heading" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50">
           Skip to main content
         </a>
-
+        
         {/* Navigation Header */}
         <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200" role="navigation" aria-label="Main navigation">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -63,7 +64,7 @@ export default function RootLayout({
                 </div>
               </div>
               <div className="md:hidden">
-                <button
+                <button 
                   className="text-gray-700 hover:text-blue-600 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md"
                   aria-label="Toggle mobile menu"
                   aria-expanded="false"
@@ -77,11 +78,14 @@ export default function RootLayout({
             </div>
           </div>
         </nav>
-
+        
         {/* Main Content with top padding for fixed nav */}
         <div className="pt-16">
           {children}
         </div>
+        
+        {/* Vercel Analytics */}
+        <Analytics />
       </body>
     </html>
   )
