@@ -7,6 +7,7 @@ import { LanguagesSection } from './components/sections/LanguagesSection'
 import { PhotosSection } from './components/sections/PhotosSection'
 import { ContactSection } from './components/sections/ContactSection'
 import { CallToActionSection } from './components/sections/CallToActionSection'
+import { CVDownloadSection } from './components/sections/CVDownloadSection'
 import { Footer } from './components/ui/Footer'
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
       <LanguagesSection />
       <PhotosSection />
       <ContactSection />
+      <CVDownloadSection />
       <CallToActionSection />
       <Footer />
     </main>
