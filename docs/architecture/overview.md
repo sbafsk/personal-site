@@ -177,6 +177,48 @@ src/lib/
 - **Environment Variables**: Secure API keys and secrets
 - **Content Security Policy**: Prevent XSS attacks
 
+## AI Integration & Context Engineering
+
+### MCP Server Configuration ✅
+The project includes a complete MCP server setup for AI integration:
+
+```json
+{
+  "mcpServers": {
+    "personal-site-docs": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-filesystem", "./docs"],
+      "env": {
+        "PROJECT_NAME": "Sebastián Pereira Rivero - Personal Site",
+        "CONTEXT_TYPE": "personal_site_documentation"
+      }
+    },
+    "personal-site-standards": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-filesystem", "./standards"],
+      "env": {
+        "PROJECT_NAME": "Sebastián Pereira Rivero - Personal Site",
+        "context_type": "personal_site_standards"
+      }
+    }
+  }
+}
+```
+
+### AI-Accessible Architecture ✅
+- **Structured Content**: YAML data files with validation
+- **Component Understanding**: Clear, modular component structure
+- **Documentation Access**: Complete MCP server access to docs and standards
+- **Data Management**: AI can read, validate, and modify content
+- **Type Safety**: Full TypeScript support for AI understanding
+
+### AI Integration Capabilities ✅
+- **Content Management**: Read, update, and validate YAML data
+- **Code Understanding**: Analyze component architecture and data flow
+- **Documentation Updates**: Modify progress tracking and architecture docs
+- **Development Assistance**: Help implement features and fix issues
+- **Quality Assurance**: Validate changes and maintain standards
+
 ## Upcoming Enhancements
 
 ### Phase 3: Enhanced Features (Week 3) - 90% Complete
