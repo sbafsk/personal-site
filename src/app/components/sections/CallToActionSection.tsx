@@ -10,7 +10,7 @@ export function CallToActionSection() {
                     Ready to Start Your Next Project?
                 </h2>
                 <p className="mt-4 text-lg leading-8 text-blue-100">
-                    Let's discuss how we can bring your ideas to life with modern, scalable web solutions.
+                    Let&apos;s discuss how we can bring your ideas to life with modern, scalable web solutions.
                 </p>
                 <div className="mt-8 flex items-center justify-center gap-x-6">
                     <Button asChild size="lg" variant="secondary" className="min-h-[44px]">

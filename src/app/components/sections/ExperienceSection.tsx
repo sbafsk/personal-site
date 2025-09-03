@@ -2,7 +2,6 @@ import { Section } from "@/components/ui/Section"
 import { SectionHeader } from "@/components/ui/SectionHeader"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
 
 interface WorkExperience {
     id: string

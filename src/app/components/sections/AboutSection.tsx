@@ -13,7 +13,7 @@ export function AboutSection() {
             <div className="mt-8 mx-auto max-w-3xl">
                 <p className="text-lg leading-8 text-gray-600">
                     My background began in automation and scripting, giving me a unique foundation in systems thinking and efficiency.
-                    I'm focused on product quality, performance, and innovation, with growing experience in AI/automation practices
+                    I&apos;m focused on product quality, performance, and innovation, with growing experience in AI/automation practices
                     (Cursor AI, MCP, BMAD).
                 </p>
 
