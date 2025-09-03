@@ -1,0 +1,106 @@
+# Technical Skills and Expertise
+# Last Updated: 2025-09-03
+
+skill_categories:
+  - title: "Frontend"
+    description: "Modern frontend development with React ecosystem"
+    skills:
+      - name: "React & Next.js"
+        level: "Advanced"
+        description: "Advanced proficiency in React ecosystem"
+        years: 5
+      - name: "TypeScript & JavaScript"
+        level: "Expert"
+        description: "Expert level TypeScript and modern JavaScript"
+        years: 7
+      - name: "React Native"
+        level: "Intermediate"
+        description: "Mobile development experience"
+        years: 3
+      - name: "HTML5 & CSS3"
+        level: "Advanced"
+        description: "Semantic markup and modern styling"
+        years: 7
+
+  - title: "Backend & APIs"
+    description: "Full-stack backend development and API design"
+    skills:
+      - name: "GraphQL"
+        level: "Advanced"
+        description: "Schema design and implementation"
+        years: 3
+      - name: "NestJS"
+        level: "Intermediate"
+        description: "Node.js framework experience"
+        years: 2
+      - name: "Ruby on Rails"
+        level: "Intermediate"
+        description: "Full-stack development"
+        years: 3
+      - name: "Phoenix (Elixir)"
+        level: "Intermediate"
+        description: "Functional programming experience"
+        years: 1
+      - name: "REST APIs"
+        level: "Advanced"
+        description: "Design and integration"
+        years: 5
+
+  - title: "AI & Automation"
+    description: "AI-assisted development and process automation"
+    skills:
+      - name: "Prompt Engineering"
+        level: "Advanced"
+        description: "AI interaction optimization"
+        years: 2
+      - name: "AI-assisted development"
+        level: "Advanced"
+        description: "MCP, BMAD integration"
+        years: 2
+      - name: "RPA (Robotic Process Automation)"
+        level: "Expert"
+        description: "Workflow automation"
+        years: 4
+
+  - title: "Cloud & DevOps"
+    description: "Cloud infrastructure and development operations"
+    skills:
+      - name: "Jest"
+        level: "Advanced"
+        description: "Testing framework"
+        years: 3
+      - name: "Git"
+        level: "Advanced"
+        description: "Version control"
+        years: 7
+      - name: "CI/CD"
+        level: "Intermediate"
+        description: "Continuous integration/deployment"
+        years: 3
+      - name: "Vercel"
+        level: "Advanced"
+        description: "Frontend deployment"
+        years: 3
+      - name: "AWS basics"
+        level: "Intermediate"
+        description: "Cloud infrastructure"
+        years: 2
+
+  - title: "Databases"
+    description: "Data management and query optimization"
+    skills:
+      - name: "PostgreSQL"
+        level: "Advanced"
+        description: "Relational database"
+        years: 4
+      - name: "SQL"
+        level: "Advanced"
+        description: "Query optimization"
+        years: 6
+
+# Skill proficiency levels
+proficiency_levels:
+  expert: "5+ years, deep expertise"
+  advanced: "3-5 years, strong proficiency"
+  intermediate: "1-3 years, working knowledge"
+  basic: "Less than 1 year, learning"

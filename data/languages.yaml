@@ -1,0 +1,22 @@
+# Language Proficiency
+# Last Updated: 2025-09-03
+
+languages:
+  - name: "Spanish"
+    level: "Native"
+    proficiency: "native"
+    description: "Native language, used for daily communication and professional work"
+    usage: ["Daily communication", "Professional meetings", "Technical documentation"]
+
+  - name: "English"
+    level: "C1 Advanced"
+    proficiency: "advanced"
+    description: "Advanced professional proficiency, used for international collaboration"
+    usage: ["International teams", "Technical docs", "Client communication"]
+
+# Proficiency scale
+proficiency_scale:
+  native: "Native speaker, complete mastery"
+  advanced: "C1-C2 level, professional proficiency"
+  intermediate: "B1-B2 level, working knowledge"
+  basic: "A1-A2 level, basic communication"

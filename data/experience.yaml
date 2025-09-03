@@ -1,0 +1,81 @@
+# Professional Experience Data
+# Last Updated: 2025-09-03
+
+work_experiences:
+  - id: "mimiquate"
+    company: "Mimiquate"
+    role: "Software Engineer"
+    location: "Montevideo, Uruguay"
+    period: "January 2024 to April 2024"
+    status: "completed"
+    description: |
+      Led the development of a project management tool using Elixir and Phoenix, focusing on rapid prototyping and robust backend architecture.
+      Mentored junior developers and led internal code reviews and tech talks to improve team-wide technical skills and collaboration practices.
+      Enhanced collaboration practices within a fast-moving team.
+    technologies: ["Elixir", "Phoenix", "PostgreSQL"]
+    achievements:
+      - "Led project management tool development"
+      - "Mentored junior developers"
+      - "Improved team collaboration practices"
+    impact: "Enhanced team technical skills and collaboration"
+
+  - id: "occupier"
+    company: "Occupier"
+    role: "Frontend Engineer"
+    location: "Remote"
+    period: "October 2021 to August 2023"
+    status: "completed"
+    description: |
+      Key contributor to a lease accounting SaaS used by over 5,000 daily users, delivering features that significantly improved UX and client retention.
+      Spearheaded the migration of core data models from REST to GraphQL, boosting application performance and developer efficiency.
+      Partnered closely with product and design teams to prototype and validate new features, ensuring a user-centric approach from ideation to launch.
+    technologies: ["React", "Next.js", "TypeScript", "GraphQL"]
+    achievements:
+      - "Scaled SaaS to 5k+ daily users"
+      - "Led REST to GraphQL migration"
+      - "Improved application performance"
+    impact: "Enhanced UX and client retention"
+
+  - id: "basf"
+    company: "BASF Services America"
+    role: "RPA Developer"
+    location: "Montevideo, Uruguay"
+    period: "January 2020 to August 2020"
+    status: "completed"
+    description: |
+      Automated complex financial workflows, resulting in annual savings of over 500 hours of manual labor.
+      Built automation bots that reduced financial closing times from one week to just a few hours.
+    technologies: ["UiPath", "Automation", "Financial Systems"]
+    achievements:
+      - "Automated financial workflows"
+      - "Reduced closing times from 1 week to hours"
+    impact: "Saved 500+ hours annually"
+
+  - id: "intermedia"
+    company: "Intermedia"
+    role: "RPA Developer"
+    location: "Montevideo, Uruguay"
+    period: "November 2018 to December 2019"
+    status: "completed"
+    description: |
+      Developed over 30 automation bots across multiple departments, driving efficiency and reducing manual tasks.
+      Supported the company's transition to an agile methodology (Scrum), helping improve team-wide collaboration.
+    technologies: ["UiPath", "Agile", "Scrum", "Automation"]
+    achievements:
+      - "Built 30+ automation bots"
+      - "Supported agile transition"
+    impact: "Improved team collaboration"
+
+  - id: "asignet"
+    company: "Asignet"
+    role: "Script Developer"
+    location: "Montevideo, Uruguay"
+    period: "September 2016 to November 2018"
+    status: "completed"
+    description: |
+      Created over 100 invoice scripts and 40 parsers for data extraction, significantly improving data processing capabilities.
+    technologies: ["Scripting", "Data Processing", "Automation"]
+    achievements:
+      - "Created 100+ invoice scripts"
+      - "Built 40+ data parsers"
+    impact: "Improved data processing capabilities"
