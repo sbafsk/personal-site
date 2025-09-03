@@ -1,11 +1,10 @@
-import { Section } from "@/components/ui/Section"
-import { SectionHeader } from "@/components/ui/SectionHeader"
+import { Section } from "../ui/Section"
+import { SectionHeader } from "../ui/SectionHeader"
 
 export function AboutSection() {
     return (
         <Section id="about" ariaLabelledby="about-heading">
             <SectionHeader
-                id="about-heading"
                 title="About Me"
                 description="Full Stack Developer with 7+ years of experience building and scaling modern web applications. Specialized in React, Next.js, and TypeScript, with additional expertise in GraphQL integrations, rapid prototyping, and UX optimization. Adept at working in agile, distributed teams and mentoring peers."
             />

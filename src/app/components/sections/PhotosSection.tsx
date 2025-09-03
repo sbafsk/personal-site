@@ -1,6 +1,6 @@
-import { Section } from "@/components/ui/Section"
-import { SectionHeader } from "@/components/ui/SectionHeader"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Section } from "../ui/Section"
+import { SectionHeader } from "../ui/SectionHeader"
+import { Card, CardContent, CardHeader, CardTitle } from "../../../components/ui/card"
 
 export function PhotosSection() {
     return (

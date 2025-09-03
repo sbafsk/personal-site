@@ -1,5 +1,5 @@
-import { Section } from "@/components/ui/Section"
-import { Button } from "@/components/ui/button"
+import { Section } from "../ui/Section"
+import { Button } from "../../../components/ui/button"
 import Link from "next/link"
 
 export function CallToActionSection() {
