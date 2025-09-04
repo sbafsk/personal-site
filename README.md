@@ -2,6 +2,10 @@
 
 **Senior Full Stack Developer** with 7+ years of experience building and scaling modern web applications.
 
+## 🌐 **Live Site**
+**Status:** ✅ **MVP Successfully Deployed to Vercel**  
+**URL:** https://personal-site-lpwaqlv2j-sbafsks-projects.vercel.app
+
 ## ✨ **Features**
 
 ### **Professional Showcase**
@@ -46,7 +50,7 @@
 - **ESLint** - Code quality and consistency
 - **Prettier** - Code formatting
 - **Git** - Version control
-- **npm** - Package management
+- **Yarn** - Package management
 
 ### **Deployment**
 - **Vercel** - Recommended hosting platform
@@ -84,7 +88,7 @@
 
 ### **Prerequisites**
 - Node.js 18+ 
-- npm or yarn
+- Yarn
 - Git
 
 ### **Installation**
@@ -94,24 +98,32 @@ git clone [repository-url]
 cd personal-site
 
 # Install dependencies
-npm install
+yarn install
 
 # Start development server
-npm run dev
+yarn dev
 
 # Build for production
-npm run build
+yarn build
 
 # Start production server
-npm start
+yarn start
 ```
 
 ### **Development Commands**
 ```bash
-npm run dev      # Start development server
-npm run build    # Build for production
-npm run start    # Start production server
-npm run lint     # Run ESLint
+yarn dev         # Start development server
+yarn build       # Build for production
+yarn start       # Start production server
+yarn lint        # Run ESLint
+yarn type-check  # Run TypeScript type checking
+```
+
+### **Deployment Commands**
+```bash
+vercel           # Deploy to preview
+vercel --prod    # Deploy to production
+vercel ls        # List deployments
 ```
 
 ## 📁 **Project Structure**
@@ -181,6 +193,16 @@ personal-site/
 - Contact information
 - Professional links
 
+### **CV Download Section**
+- Professional CV access
+- Download functionality
+- Professional presentation
+
+### **Call to Action Section**
+- Engagement optimization
+- Professional networking
+- Contact encouragement
+
 ## 🔧 **Customization**
 
 ### **Content Updates**
@@ -199,6 +221,13 @@ personal-site/
 - Maintain consistency with design system
 
 ## 📊 **Performance Metrics**
+
+### **Production Build**
+- **Build Time**: ~5 seconds
+- **Bundle Size**: 134 kB (First Load JS)
+- **Page Size**: 32.3 kB (main page)
+- **Static Generation**: All pages pre-rendered
+- **Code Splitting**: Next.js automatic optimization
 
 ### **Core Web Vitals**
 - **LCP** (Largest Contentful Paint): Optimized for fast loading
@@ -235,16 +264,20 @@ personal-site/
 
 ## 🚀 **Deployment**
 
-### **Vercel (Recommended)**
+### **Vercel (Production Deployed)**
+✅ **Status:** Successfully deployed to production  
+🌐 **Live URL:** https://personal-site-lpwaqlv2j-sbafsks-projects.vercel.app  
+📊 **Dashboard:** https://vercel.com/sbafsks-projects/personal-site
+
 ```bash
 # Install Vercel CLI
-npm i -g vercel
+yarn global add vercel
 
-# Deploy
-vercel
-
-# Production deployment
+# Deploy to production
 vercel --prod
+
+# Check deployment status
+vercel ls
 ```
 
 ### **Other Platforms**
@@ -270,7 +303,7 @@ vercel --prod
 
 ### **Key Documents**
 - **`docs/style-guide.md`** - Complete design system
-- **`standards/ui.md`** - UI/UX standards and compliance
+- **`standards/ui.md`** - UI/UX standards and compliance (Updated with deployment status)
 - **`docs/new_cv.md`** - Current professional CV
 - **`docs/cover_letter.md`** - Cover letter template
 
@@ -286,6 +319,7 @@ vercel --prod
 - **Phone**: +598 98 900 649
 - **LinkedIn**: [Sebastián Pereira Rivero](https://www.linkedin.com/in/sebastian-pereira-rivero/)
 - **Location**: Montevideo, Uruguay
+- **Live Site**: https://personal-site-lpwaqlv2j-sbafsks-projects.vercel.app
 
 ## 📄 **License**
 
@@ -295,4 +329,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 **Built with ❤️ using Next.js, TypeScript, and TailwindCSS**
 
-*Last updated: September 2025*
+*Last updated: September 2025*  
+*Status: ✅ MVP Deployed to Vercel*

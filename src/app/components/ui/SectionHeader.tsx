@@ -19,9 +19,9 @@ export function SectionHeader({
     alignment = "center"
 }: SectionHeaderProps) {
     const titleSizeClasses = {
-        sm: "text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl",
-        md: "text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl",
-        lg: "text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+        sm: "text-3xl font-bold tracking-tight text-foreground sm:text-4xl",
+        md: "text-4xl font-bold tracking-tight text-foreground sm:text-5xl",
+        lg: "text-4xl font-bold tracking-tight text-foreground sm:text-6xl"
     }
 
     const alignmentClasses = {
@@ -32,15 +32,18 @@ export function SectionHeader({
 
     return (
         <div className={cn(
-            "mx-auto max-w-3xl",
+            "mx-auto max-w-4xl",
             alignmentClasses[alignment],
             className
         )}>
-            <h2 className={titleSizeClasses[titleSize]}>
-                {title}
-            </h2>
+            <div className="relative">
+                <h2 className={titleSizeClasses[titleSize]}>
+                    {title}
+                </h2>
+                <div className="mt-4 h-1 w-20 bg-gradient-to-r from-primary via-primary/80 to-primary/60 rounded-full mx-auto"></div>
+            </div>
             {description && (
-                <p className="mt-6 text-lg leading-8 text-gray-600">
+                <p className="mt-8 text-xl leading-8 text-muted-foreground max-w-3xl mx-auto">
                     {description}
                 </p>
             )}

@@ -13,7 +13,7 @@ export function AboutSection() {
             />
 
             <div className="mt-8 mx-auto max-w-3xl">
-                <p className="text-lg leading-8 text-gray-600">
+                <p className="text-lg leading-8 text-foreground">
                     {profile.bio}
                 </p>
             </div>

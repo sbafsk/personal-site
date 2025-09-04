@@ -5,52 +5,39 @@ import { Badge } from "../../../components/ui/badge"
 import { getLanguages } from "../../../lib/data-loader"
 
 export function LanguagesSection() {
-  const languages = getLanguages()
-  
-  const proficiencyColors = {
-    native: "bg-green-100 text-green-800",
-    advanced: "bg-blue-100 text-blue-800",
-    intermediate: "bg-yellow-100 text-yellow-800",
-    basic: "bg-gray-100 text-gray-800"
-  }
-  
+  const languagesData = getLanguages()
+
   return (
     <Section id="languages">
       <SectionHeader
         title="Languages"
         description="Communication skills for global collaboration"
       />
-      
-      <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 max-w-2xl mx-auto">
-        {languages.map((language) => (
-          <Card key={language.name} className="text-center">
+
+      <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {languagesData.map((language) => (
+          <Card key={language.name} className="bg-card border-border">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold text-gray-900">
+              <CardTitle className="text-lg font-semibold text-card-foreground">
                 {language.name}
               </CardTitle>
+              <div className="flex items-center justify-between">
+                <Badge
+                  variant={language.proficiency === "native" ? "default" : "secondary"}
+                  className={`text-xs ${language.proficiency === "native"
+                    ? "bg-green-500/20 text-green-400 border-green-500/30"
+                    : "bg-blue-500/20 text-blue-400 border-blue-500/30"
+                    }`}
+                >
+                  {language.level}
+                </Badge>
+              </div>
             </CardHeader>
             <CardContent>
-              <p className="text-lg font-medium text-gray-700 mb-3">
-                {language.level}
-              </p>
-              <p className="text-sm text-gray-600 mb-3">
-                {language.description}
-              </p>
-              <Badge 
-                variant="secondary" 
-                className={`text-xs ${proficiencyColors[language.proficiency as keyof typeof proficiencyColors]}`}
-              >
-                {language.proficiency.charAt(0).toUpperCase() + language.proficiency.slice(1)}
-              </Badge>
-              <div className="mt-3">
-                <p className="text-xs text-gray-500 mb-2">Usage:</p>
-                <div className="flex flex-wrap gap-1 justify-center">
-                  {language.usage.map((usage, idx) => (
-                    <span key={idx} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
-                      {usage}
-                    </span>
-                  ))}
-                </div>
+              <div className="space-y-3">
+                <p className="text-card-foreground text-sm leading-relaxed">
+                  {language.description}
+                </p>
               </div>
             </CardContent>
           </Card>

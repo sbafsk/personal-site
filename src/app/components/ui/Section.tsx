@@ -19,15 +19,15 @@ export function Section({
     ariaLabelledby
 }: SectionProps) {
     const backgroundClasses = {
-        white: "bg-white",
-        gray: "bg-gray-50",
-        blue: "bg-blue-50"
+        white: "bg-background",
+        gray: "bg-muted",
+        blue: "bg-primary/5"
     }
 
     const paddingClasses = {
-        sm: "py-12",
-        md: "py-16",
-        lg: "py-24"
+        sm: "py-16",
+        md: "py-24",
+        lg: "py-32"
     }
 
     return (
