@@ -2,8 +2,15 @@
 
 import { useState } from 'react'
 
-export default function ContactForm() {
-    const [formData, setFormData] = useState({
+interface ContactFormData {
+    name: string
+    email: string
+    subject: string
+    message: string
+}
+
+export function ContactForm() {
+    const [formData, setFormData] = useState<ContactFormData>({
         name: '',
         email: '',
         subject: '',
@@ -23,132 +30,118 @@ export default function ContactForm() {
         e.preventDefault()
         setIsSubmitting(true)
 
-        // Simulate form submission (replace with actual API call)
-        await new Promise(resolve => setTimeout(resolve, 1000))
+        try {
+            // Simulate form submission
+            await new Promise(resolve => setTimeout(resolve, 1000))
 
-        // For now, just show success message
-        setSubmitStatus('success')
-        setIsSubmitting(false)
-
-        // Reset form after 3 seconds
-        setTimeout(() => {
-            setSubmitStatus('idle')
+            setSubmitStatus('success')
             setFormData({ name: '', email: '', subject: '', message: '' })
-        }, 3000)
+        } catch (_error) {
+            setSubmitStatus('error')
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     return (
-        <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Send me a message</h3>
-
+        <form onSubmit={handleSubmit} className="space-y-6">
             {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
-                    <p className="text-green-800">Thank you! Your message has been sent successfully.</p>
+                <div className="p-4 bg-secondary/10 border border-secondary/20 rounded-xl shadow-dark-sm animate-scale-in">
+                    <p className="text-sm text-secondary font-medium">
+                        Thank you! Your message has been sent. I&apos;ll get back to you soon.
+                    </p>
                 </div>
             )}
 
             {submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
-                    <p className="text-red-800">Sorry, there was an error sending your message. Please try again.</p>
+                <div className="p-4 bg-danger/10 border border-danger/20 rounded-xl shadow-dark-sm animate-scale-in">
+                    <p className="text-sm text-danger font-medium">
+                        Sorry, there was an error. Please try again or contact me directly.
+                    </p>
                 </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-6" role="form" aria-labelledby="contact-form-title" aria-describedby="form-instructions">
-                <div id="form-instructions" className="sr-only">
-                    Contact form with required fields. All fields marked with an asterisk are required.
-                </div>
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                    <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                            Name <span className="text-red-500" aria-label="required">*</span>
-                        </label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            value={formData.name}
-                            onChange={handleChange}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors min-h-[44px]"
-                            placeholder="Your name"
-                            aria-describedby="name-required"
-                            aria-required="true"
-                        />
-                        <div id="name-required" className="sr-only">Name is required</div>
-                    </div>
-
-                    <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                            Email <span className="text-red-500" aria-label="required">*</span>
-                        </label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors min-h-[44px]"
-                            placeholder="your.email@example.com"
-                            aria-describedby="email-required"
-                            aria-required="true"
-                        />
-                        <div id="email-required" className="sr-only">Email is required</div>
-                    </div>
-                </div>
-
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                        Subject <span className="text-red-500" aria-label="required">*</span>
+                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                        Name
                     </label>
                     <input
                         type="text"
-                        id="subject"
-                        name="subject"
+                        id="name"
+                        name="name"
                         required
-                        value={formData.subject}
+                        value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors min-h-[44px]"
-                        placeholder="What's this about?"
-                        aria-describedby="subject-required"
+                        className="w-full px-3 py-2 bg-background-alt border border-border rounded-xl text-sm text-foreground placeholder:text-foreground-subtle focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/30 hover:border-border-subtle transition-all duration-200 shadow-dark-inner focus:shadow-glow-primary"
+                        placeholder="Your name"
                         aria-required="true"
                     />
-                    <div id="subject-required" className="sr-only">Subject is required</div>
                 </div>
 
                 <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                        Message <span className="text-red-500" aria-label="required">*</span>
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                        Email
                     </label>
-                    <textarea
-                        id="message"
-                        name="message"
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
                         required
-                        rows={5}
-                        value={formData.message}
+                        value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none min-h-[44px]"
-                        placeholder="Tell me about your project or how I can help..."
-                        aria-describedby="message-required"
+                        className="w-full px-3 py-2 bg-background-alt border border-border rounded-xl text-sm text-foreground placeholder:text-foreground-subtle focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/30 hover:border-border-subtle transition-all duration-200 shadow-dark-inner focus:shadow-glow-primary"
+                        placeholder="your@email.com"
                         aria-required="true"
                     />
-                    <div id="message-required" className="sr-only">Message is required</div>
                 </div>
+            </div>
 
+            <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                    Subject
+                </label>
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    required
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full px-3 py-2 bg-background-alt border border-border rounded-xl text-sm text-foreground placeholder:text-foreground-subtle focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/30 hover:border-border-subtle transition-all duration-200 shadow-dark-inner focus:shadow-glow-primary"
+                    placeholder="What's this about?"
+                    aria-required="true"
+                />
+            </div>
+
+            <div>
+                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                    Message
+                </label>
+                <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full px-3 py-2 bg-background border border-border rounded-md text-sm text-foreground resize-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                    placeholder="Tell me about your project or opportunity..."
+                    aria-required="true"
+                />
+            </div>
+
+            <div className="flex justify-end">
                 <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-blue-600 text-white py-3 px-6 rounded-md font-semibold hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors min-h-[44px]"
-                    aria-describedby={isSubmitting ? "submitting-status" : undefined}
+                    className="group px-8 py-3 bg-primary text-background text-sm font-semibold rounded-xl hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-surface disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-dark-sm hover:shadow-glow-primary"
                 >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    <span className={`transition-all duration-200 ${isSubmitting ? 'animate-pulse' : ''}`}>
+                        {isSubmitting ? 'Sending...' : 'Send Message'}
+                    </span>
                 </button>
-                {isSubmitting && (
-                    <div id="submitting-status" className="sr-only" aria-live="polite">
-                        Form is being submitted, please wait
-                    </div>
-                )}
-            </form>
-        </div>
+            </div>
+        </form>
     )
 }

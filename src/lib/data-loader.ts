@@ -56,7 +56,6 @@ export interface Language {
   level: string
   proficiency: string
   description: string
-  usage: string[]
 }
 
 // Profile data
@@ -67,10 +66,10 @@ export const profileData: Profile = {
   email: "spereirarivero93@gmail.com",
   phone: "+598 98 900 649",
   linkedin: "https://www.linkedin.com/in/sebastian-pereira-rivero/",
-  github: "https://github.com",
-  summary: "Senior Full Stack Developer with over 7 years of experience building and scaling modern web applications. Specialized in React, Next.js, and TypeScript, with additional expertise in GraphQL integrations, rapid prototyping, and UX optimization. Adept at working in agile, distributed teams and mentoring peers.",
+  github: "https://github.com/sbafsk/",
+  summary: "Senior Full Stack Developer with over 7 years of experience. Specialized in React, Next.js, and TypeScript, with additional expertise in GraphQL integrations, rapid prototyping, and UX optimization. Adept at working in agile, distributed teams and mentoring peers.",
   bio: "My background began in automation and scripting, giving me a unique foundation in systems thinking and efficiency. I'm focused on product quality, performance, and innovation, with growing experience in AI/automation practices (Cursor AI, MCP, BMAD). Recently completed my IT Business Management Diploma while keeping my technical skills sharp through personal projects and exploring emerging AI development practices.",
-  tagline: "Building and scaling modern web applications with a focus on performance, UX, and AI-assisted practices",
+  tagline: "Building modern web applications with a focus on performance, UX, and AI-assisted practices",
   subtitle: "From automation & scripting to modern web development - bringing systems thinking to every project",
   highlights: [
     "7+ years of experience in web development",
@@ -363,15 +362,13 @@ export const languagesData: Language[] = [
     name: "Spanish",
     level: "Native",
     proficiency: "native",
-    description: "Native language, used for daily communication and professional work",
-    usage: ["Daily communication", "Professional meetings", "Technical documentation"]
+    description: "Native language, used for daily communication and professional work"
   },
   {
     name: "English",
     level: "C1 Advanced",
     proficiency: "advanced",
-    description: "Advanced professional proficiency, used for international collaboration",
-    usage: ["International teams", "Technical docs", "Client communication"]
+    description: "Advanced professional proficiency, used for international collaboration"
   }
 ]
 
