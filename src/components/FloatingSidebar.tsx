@@ -26,7 +26,7 @@ export function FloatingSidebar() {
             {/* Mobile Menu Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed top-6 left-6 z-50 md:hidden w-11 h-11 bg-surface rounded-xl flex items-center justify-center hover:bg-surface-hover hover:shadow-dark-sm active:scale-95 transition-all duration-200 group shadow-dark-sm"
+                className="fixed top-6 left-6 z-50 md:hidden w-11 h-11 bg-surface/95 backdrop-blur-xl rounded-xl flex items-center justify-center hover:bg-surface-hover hover:shadow-dark-sm active:scale-95 transition-all duration-200 group shadow-dark-sm border border-border/50"
                 aria-label="Toggle navigation menu"
             >
                 <svg
