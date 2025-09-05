@@ -10,6 +10,7 @@ export function FloatingSidebar() {
 
     const navItems = [
         { name: 'Home', href: '/', icon: '◦' },
+        { name: 'Projects', href: '/projects', icon: '◦' },
         { name: 'Work', href: '/work', icon: '◦' },
         { name: 'Studies', href: '/studies', icon: '◦' },
         { name: 'Skills', href: '/skills', icon: '◦' },
@@ -26,7 +27,7 @@ export function FloatingSidebar() {
             {/* Mobile Menu Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed top-6 left-6 z-50 md:hidden w-11 h-11 bg-surface/20 backdrop-blur-xl rounded-xl flex items-center justify-center hover:bg-surface-hover/30 hover:shadow-glass-hover active:scale-95 transition-all duration-300 group shadow-glass border border-white/10 hover:border-white/20 animate-glow-pulse"
+                className="fixed top-6 right-6 z-50 md:hidden w-11 h-11 bg-surface/20 backdrop-blur-xl rounded-xl flex items-center justify-center hover:bg-surface-hover/30 hover:shadow-glass-hover active:scale-95 transition-all duration-300 group shadow-glass border border-white/10 hover:border-white/20 animate-glow-pulse"
                 aria-label="Toggle navigation menu"
             >
                 <svg
@@ -47,7 +48,7 @@ export function FloatingSidebar() {
 
             {/* Floating Sidebar */}
             <nav
-                className={`fixed left-6 top-1/2 -translate-y-1/2 z-40 transition-all duration-500 ease-out-expo ${isOpen ? 'translate-x-0 scale-100 opacity-100' : '-translate-x-full md:translate-x-0 md:scale-100 md:opacity-100 scale-95 opacity-0'
+                className={`fixed right-6 top-1/2 -translate-y-1/2 z-40 transition-all duration-500 ease-out-expo ${isOpen ? 'translate-x-0 scale-100 opacity-100' : 'translate-x-full md:translate-x-0 md:scale-100 md:opacity-100 scale-95 opacity-0'
                     }`}
                 role="navigation"
                 aria-label="Main navigation"
@@ -85,7 +86,7 @@ export function FloatingSidebar() {
                         </div>
 
                         {/* Floating indicator */}
-                        <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-1 h-8 bg-primary/50 rounded-full animate-glow-pulse shadow-glow-primary" />
+                        <div className="absolute -left-2 top-1/2 -translate-y-1/2 w-1 h-8 bg-primary/50 rounded-full animate-glow-pulse shadow-glow-primary" />
                     </div>
                 </div>
             </nav>
