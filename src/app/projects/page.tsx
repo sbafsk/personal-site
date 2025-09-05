@@ -53,7 +53,7 @@ export default function ProjectsPage() {
                         Projects
                     </h1>
                     <p className="text-lg text-foreground-muted leading-relaxed">
-                        A collection of projects I've built, ranging from full-stack platforms to developer tools.
+                        A collection of projects I&apos;ve built, ranging from full-stack platforms to developer tools.
                     </p>
                 </div>
 
