@@ -35,8 +35,13 @@
 - **Visual Hierarchy** - Clear information architecture
 - **Responsive Design** - Mobile-first responsive layouts
 - **Interactive Elements** - Enhanced hover and focus states
-- **Smooth Transitions** - CSS-based animations
+- **Smooth Transitions** - CSS-based and Tailwind animations
 - **Professional Typography** - Inter font with proper scaling
+- **Minimalistic Dark Theme** - Default dark (not-too-dark) palette with high contrast
+- **Floating Sidebar** - Borderless, lightweight, animated navigation
+- **Glassmorphism** - Subtle `backdrop-blur` + translucent surfaces for cards and navbar
+- **Mesh Gradients** - Animated, low-opacity background meshes for depth
+- **Microinteractions** - Bounce, wiggle, lift and glow effects for feedback
 
 ## 🛠️ **Technology Stack**
 
@@ -56,6 +61,9 @@
 - **Vercel** - Recommended hosting platform
 - **Static Generation** - Optimized for performance
 - **CDN** - Global content delivery
+
+### **Repository**
+- **GitHub**: https://github.com/sbafsk/personal-site
 
 ## 📱 **Responsive Design**
 
@@ -223,11 +231,11 @@ personal-site/
 ## 📊 **Performance Metrics**
 
 ### **Production Build**
-- **Build Time**: ~5 seconds
-- **Bundle Size**: 134 kB (First Load JS)
-- **Page Size**: 32.3 kB (main page)
-- **Static Generation**: All pages pre-rendered
-- **Code Splitting**: Next.js automatic optimization
+- **Build Time**: ~9.8 seconds
+- **First Load JS**: 198 kB (shared vendor chunk + app)
+- **Route Sizes**: Home/Skills/Studies/Work ~115 B; Contact ~1.41 kB
+- **Static Generation**: All app routes prerendered (9/9)
+- **Code Splitting**: Next.js automatic + vendor chunk separation
 
 ### **Core Web Vitals**
 - **LCP** (Largest Contentful Paint): Optimized for fast loading
@@ -236,9 +244,11 @@ personal-site/
 
 ### **Optimization Features**
 - **Code Splitting** - Automatic Next.js optimization
-- **Image Optimization** - Next.js Image component
+- **Image Optimization** - WebP/AVIF formats; responsive sizes
 - **CSS Purging** - Tailwind CSS optimization
 - **Static Generation** - Pre-rendered pages
+- **Package Optimization** - `optimizePackageImports` for icon/UI libs
+ - **Console Stripping** - Remove console logs in production
 
 ## 🧪 **Testing**
 

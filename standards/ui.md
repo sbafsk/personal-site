@@ -134,6 +134,28 @@
 - **Last Deployment:** September 2025
 - **Performance:** Optimized for Core Web Vitals
 
+### 🎨 Design System Updates (2025-09)
+- **Default Dark Theme (not-too-dark)** using deep navy background `#0a0e13`
+- **Typography Scale** tuned for minimalistic readability (smaller base sizes)
+- **Color Tokens**: `foreground`, `foreground-muted`, `foreground-subtle`, `primary`, `secondary`, `warning`, `danger`
+- **Surfaces**: `surface`, `surface-elevated`, `surface-hover` with subtle borders
+- **Shadows**: multi-angle `shadow-dark-*`, floating `shadow-float`, glass `shadow-glass*`, and light `shadow-light-*`
+- **Glassmorphism**: `bg-white/5` + `backdrop-blur` + `border-white/10..20`
+- **Mesh Gradients**: subtle animated backgrounds (`bg-mesh-dark`, `bg-mesh-subtle`)
+- **Microinteractions**: `bounceSubtle`, `wiggle`, `liftHover`, `glowPulse`, `listHover`, `glassShimmer`, `meshFloat`
+
+### 🧭 Navigation
+- **Floating Sidebar** with borderless, glass style; active state glow; mobile hamburger with glass background
+
+### 🧩 Components
+- **Cards/Lists**: Hover lift, subtle background, glow; glass surfaces on focus/hover
+- **Badges**: Removed skill level badges for cleaner minimalism
+- **Forms**: Inputs use glass surfaces; buttons lift on hover; success/error states animated
+
+### ♿ Accessibility Notes
+- Ensure `backdrop-blur` and low-opacity overlays maintain AA contrast with text
+- Focus rings remain visible over mesh/glass backgrounds
+
 ### ✅ **Fully Implemented & Deployed:**
 
 #### **Core Application Structure**
