@@ -26,7 +26,7 @@ export function FloatingSidebar() {
             {/* Mobile Menu Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed top-6 left-6 z-50 md:hidden w-11 h-11 bg-surface/95 backdrop-blur-xl rounded-xl flex items-center justify-center hover:bg-surface-hover hover:shadow-dark-sm active:scale-95 transition-all duration-200 group shadow-dark-sm border border-border/50"
+                className="fixed top-6 left-6 z-50 md:hidden w-11 h-11 bg-surface/20 backdrop-blur-xl rounded-xl flex items-center justify-center hover:bg-surface-hover/30 hover:shadow-glass-hover active:scale-95 transition-all duration-300 group shadow-glass border border-white/10 hover:border-white/20 animate-glow-pulse"
                 aria-label="Toggle navigation menu"
             >
                 <svg
@@ -52,38 +52,41 @@ export function FloatingSidebar() {
                 role="navigation"
                 aria-label="Main navigation"
             >
-                <div className="bg-surface/95 backdrop-blur-xl rounded-2xl p-3 shadow-float hover:shadow-float-lg transition-all duration-400 animate-fade-in-up">
-                    <div className="flex flex-col space-y-1">
-                        {navItems.map((item, index) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                className={`group relative flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 ease-out-back transform hover:scale-105 active:scale-95 ${isActive(item.href)
-                                    ? 'bg-primary/15 text-primary shadow-glow-primary'
-                                    : 'text-foreground-muted hover:text-foreground hover:bg-surface-hover hover:shadow-dark-sm'
-                                    }`}
-                                onClick={() => setIsOpen(false)}
-                                style={{ animationDelay: `${index * 50}ms` }}
-                            >
-                                <span className={`mr-3 text-sm transition-all duration-300 ${isActive(item.href)
-                                    ? 'opacity-100 text-primary animate-pulse-subtle'
-                                    : 'opacity-50 group-hover:opacity-100 group-hover:animate-float'
-                                    }`}>
-                                    {item.icon}
-                                </span>
-                                <span className="whitespace-nowrap font-medium">{item.name}</span>
-                                {isActive(item.href) && (
-                                    <span className="ml-auto w-2 h-2 bg-primary rounded-full animate-pulse-subtle shadow-glow-primary" />
-                                )}
+                <div className="bg-surface/15 backdrop-blur-2xl rounded-2xl p-3 shadow-glass hover:shadow-glass-hover transition-all duration-400 animate-fade-in-up border border-white/10 hover:border-white/20 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-mesh-subtle opacity-30 animate-mesh-float"></div>
+                    <div className="relative z-10">
+                        <div className="flex flex-col space-y-1">
+                            {navItems.map((item, index) => (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    className={`group relative flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 ease-out-back transform hover:animate-lift-hover active:scale-95 ${isActive(item.href)
+                                        ? 'bg-primary/20 backdrop-blur-sm text-primary shadow-glow-primary border border-primary/30'
+                                        : 'text-foreground-muted hover:text-foreground hover:bg-white/5 hover:shadow-light-sm hover:backdrop-blur-sm hover:animate-list-hover'
+                                        }`}
+                                    onClick={() => setIsOpen(false)}
+                                    style={{ animationDelay: `${index * 50}ms` }}
+                                >
+                                    <span className={`mr-3 text-sm transition-all duration-300 ${isActive(item.href)
+                                        ? 'opacity-100 text-primary animate-pulse-subtle'
+                                        : 'opacity-50 group-hover:opacity-100 group-hover:animate-float'
+                                        }`}>
+                                        {item.icon}
+                                    </span>
+                                    <span className="whitespace-nowrap font-medium">{item.name}</span>
+                                    {isActive(item.href) && (
+                                        <span className="ml-auto w-2 h-2 bg-primary rounded-full animate-pulse-subtle shadow-glow-primary" />
+                                    )}
 
-                                {/* Hover effect overlay */}
-                                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
-                            </Link>
-                        ))}
+                                    {/* Hover effect overlay */}
+                                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+                                </Link>
+                            ))}
+                        </div>
+
+                        {/* Floating indicator */}
+                        <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-1 h-8 bg-primary/50 rounded-full animate-glow-pulse shadow-glow-primary" />
                     </div>
-
-                    {/* Floating indicator */}
-                    <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-1 h-8 bg-primary/30 rounded-full animate-pulse-subtle" />
                 </div>
             </nav>
 

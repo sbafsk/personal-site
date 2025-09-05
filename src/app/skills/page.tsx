@@ -36,24 +36,25 @@ export default function SkillsPage() {
                             </div>
 
                             <div className="space-y-6">
-                                {category.skills.map((skill) => (
-                                    <div key={skill.name} className="group">
+                                {category.skills.map((skill, index) => (
+                                    <div
+                                        key={skill.name}
+                                        className="group hover:animate-list-hover transition-all duration-300 hover:bg-white/5 hover:backdrop-blur-sm rounded-lg p-3 -mx-3 hover:shadow-light-sm cursor-default"
+                                        style={{ animationDelay: `${index * 80}ms` }}
+                                    >
                                         <div className="flex items-start justify-between mb-2">
                                             <div className="flex-1">
-                                                <div className="flex items-center justify-between mb-1">
-                                                    <h3 className="text-sm font-medium text-foreground">
+                                                <div className="mb-1">
+                                                    <h3 className="text-sm font-medium text-foreground group-hover:text-primary transition-colors duration-300">
                                                         {skill.name}
                                                     </h3>
-                                                    <span className="text-xs text-foreground-subtle font-mono">
-                                                        {skill.level}
-                                                    </span>
                                                 </div>
-                                                <p className="text-xs text-foreground-muted leading-relaxed">
+                                                <p className="text-xs text-foreground-muted leading-relaxed group-hover:text-foreground transition-colors duration-300">
                                                     {skill.description}
                                                 </p>
                                             </div>
                                             <div className="text-right ml-4">
-                                                <span className="text-xs text-foreground-subtle font-mono">
+                                                <span className="text-xs text-foreground-subtle font-mono group-hover:text-secondary group-hover:animate-bounce-subtle transition-all duration-300">
                                                     {skill.years} year{skill.years !== 1 ? 's' : ''}
                                                 </span>
                                             </div>

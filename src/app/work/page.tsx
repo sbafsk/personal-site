@@ -54,9 +54,13 @@ export default function WorkPage() {
                                             </h3>
                                             <ul className="space-y-1">
                                                 {experience.achievements.map((achievement, index) => (
-                                                    <li key={index} className="flex items-start">
-                                                        <span className="inline-block w-1 h-1 rounded-full bg-foreground-subtle mt-2 mr-3 flex-shrink-0" />
-                                                        <span className="text-xs text-foreground-muted leading-relaxed">
+                                                    <li
+                                                        key={index}
+                                                        className="flex items-start group hover:animate-list-hover transition-all duration-300 hover:bg-white/5 hover:backdrop-blur-sm rounded-lg p-2 -mx-2 hover:shadow-light-sm"
+                                                        style={{ animationDelay: `${index * 50}ms` }}
+                                                    >
+                                                        <span className="inline-block w-1 h-1 rounded-full bg-foreground-subtle mt-2 mr-3 flex-shrink-0 group-hover:bg-primary group-hover:animate-bounce-subtle group-hover:shadow-glow-primary transition-all duration-300" />
+                                                        <span className="text-xs text-foreground-muted leading-relaxed group-hover:text-foreground transition-colors duration-300">
                                                             {achievement}
                                                         </span>
                                                     </li>
@@ -74,7 +78,8 @@ export default function WorkPage() {
                                                 {experience.technologies.map((tech, index) => (
                                                     <span
                                                         key={index}
-                                                        className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-surface text-foreground-muted border border-border"
+                                                        className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-white/5 backdrop-blur-sm text-foreground-muted border border-white/10 hover:bg-white/10 hover:border-white/20 hover:text-foreground hover:shadow-light-sm transition-all duration-300 hover:animate-bounce-subtle cursor-default"
+                                                        style={{ animationDelay: `${index * 30}ms` }}
                                                     >
                                                         {tech}
                                                     </span>

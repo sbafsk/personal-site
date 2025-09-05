@@ -73,7 +73,7 @@ export function ContactForm() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 bg-background-alt border border-border rounded-xl text-sm text-foreground placeholder:text-foreground-subtle focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/30 hover:border-border-subtle transition-all duration-200 shadow-dark-inner focus:shadow-glow-primary"
+                        className="w-full px-3 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl text-sm text-foreground placeholder:text-foreground-subtle focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/30 hover:border-white/20 hover:bg-white/10 transition-all duration-300 shadow-glass focus:shadow-glass-hover hover:animate-lift-hover"
                         placeholder="Your name"
                         aria-required="true"
                     />
@@ -90,7 +90,7 @@ export function ContactForm() {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-3 py-2 bg-background-alt border border-border rounded-xl text-sm text-foreground placeholder:text-foreground-subtle focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/30 hover:border-border-subtle transition-all duration-200 shadow-dark-inner focus:shadow-glow-primary"
+                        className="w-full px-3 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl text-sm text-foreground placeholder:text-foreground-subtle focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/30 hover:border-white/20 hover:bg-white/10 transition-all duration-300 shadow-glass focus:shadow-glass-hover hover:animate-lift-hover"
                         placeholder="your@email.com"
                         aria-required="true"
                     />
@@ -135,7 +135,7 @@ export function ContactForm() {
                 <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="group px-8 py-3 bg-primary text-background text-sm font-semibold rounded-xl hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-surface disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-dark-sm hover:shadow-glow-primary"
+                    className="group px-8 py-3 bg-primary/80 backdrop-blur-sm text-background text-sm font-semibold rounded-xl hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-surface disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:animate-lift-hover active:scale-95 shadow-glass hover:shadow-hover-glow border border-primary/30 hover:border-primary/50"
                 >
                     <span className={`transition-all duration-200 ${isSubmitting ? 'animate-pulse' : ''}`}>
                         {isSubmitting ? 'Sending...' : 'Send Message'}

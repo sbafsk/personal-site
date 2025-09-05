@@ -82,6 +82,13 @@ module.exports = {
           600: '#dc2626',
         },
       },
+      backgroundImage: {
+        // Mesh gradient backgrounds inspired by glazz.saran13raj.com/mesh-gradient
+        'mesh-primary': 'radial-gradient(at 40% 20%, hsla(228,100%,70%,1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%), radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%), radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%), radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%)',
+        'mesh-secondary': 'radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 1) 0px, transparent 0%), radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%), radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%), radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%), radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%), radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%), radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%)',
+        'mesh-dark': 'radial-gradient(at 40% 20%, hsla(228,50%,15%,0.7) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,50%,20%,0.6) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,30%,10%,0.8) 0px, transparent 50%), radial-gradient(at 80% 50%, hsla(340,40%,12%,0.7) 0px, transparent 50%), radial-gradient(at 0% 100%, hsla(22,35%,8%,0.9) 0px, transparent 50%), radial-gradient(at 80% 100%, hsla(242,45%,12%,0.8) 0px, transparent 50%)',
+        'mesh-subtle': 'radial-gradient(circle at 25% 25%, rgba(96, 165, 250, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(52, 211, 153, 0.08) 0%, transparent 50%), radial-gradient(circle at 75% 25%, rgba(251, 191, 36, 0.05) 0%, transparent 50%), radial-gradient(circle at 25% 75%, rgba(248, 113, 113, 0.06) 0%, transparent 50%)',
+      },
       fontSize: {
         // Smaller, more refined typography scale
         'xs': ['0.75rem', { lineHeight: '1rem' }],
@@ -133,6 +140,20 @@ module.exports = {
         // Glow effects for interactive elements
         'glow-primary': '0 0 20px rgba(96, 165, 250, 0.3)',
         'glow-secondary': '0 0 20px rgba(52, 211, 153, 0.3)',
+        
+        // Glassmorphism shadows inspired by glazz.saran13raj.com/glassmorphism
+        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+        'glass-hover': '0 8px 32px 0 rgba(31, 38, 135, 0.5), 0 0 40px rgba(96, 165, 250, 0.2)',
+        'glass-lg': '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05)',
+        
+        // Enhanced lighting effects
+        'light-sm': '0 0 10px rgba(96, 165, 250, 0.1), 0 0 20px rgba(52, 211, 153, 0.05)',
+        'light-md': '0 0 20px rgba(96, 165, 250, 0.15), 0 0 40px rgba(52, 211, 153, 0.08)',
+        'light-lg': '0 0 40px rgba(96, 165, 250, 0.2), 0 0 80px rgba(52, 211, 153, 0.1)',
+        
+        // Interactive hover shadows
+        'hover-lift': '0 20px 40px -12px rgba(0, 0, 0, 0.4), 0 0 30px rgba(96, 165, 250, 0.1)',
+        'hover-glow': '0 0 30px rgba(96, 165, 250, 0.4), 0 0 60px rgba(52, 211, 153, 0.2)',
       },
       animation: {
         // Enhanced subtle animations
@@ -146,6 +167,15 @@ module.exports = {
         'float': 'float 3s ease-in-out infinite',
         'shimmer': 'shimmer 2s linear infinite',
         'spin-slow': 'spin 3s linear infinite',
+        
+        // Enhanced microinteractions
+        'bounce-subtle': 'bounceSubtle 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+        'wiggle': 'wiggle 0.5s ease-in-out',
+        'glow-pulse': 'glowPulse 2s ease-in-out infinite',
+        'lift-hover': 'liftHover 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+        'glass-shimmer': 'glassShimmer 3s ease-in-out infinite',
+        'mesh-float': 'meshFloat 6s ease-in-out infinite',
+        'list-hover': 'listHover 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
       },
       keyframes: {
         fadeIn: {
@@ -183,6 +213,38 @@ module.exports = {
         shimmer: {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(100%)' },
+        },
+        
+        // Enhanced microinteraction keyframes
+        bounceSubtle: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-4px)' },
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '25%': { transform: 'rotate(-1deg)' },
+          '75%': { transform: 'rotate(1deg)' },
+        },
+        glowPulse: {
+          '0%, 100%': { opacity: '0.8', boxShadow: '0 0 20px rgba(96, 165, 250, 0.2)' },
+          '50%': { opacity: '1', boxShadow: '0 0 40px rgba(96, 165, 250, 0.4)' },
+        },
+        liftHover: {
+          '0%': { transform: 'translateY(0px) scale(1)' },
+          '100%': { transform: 'translateY(-2px) scale(1.02)' },
+        },
+        glassShimmer: {
+          '0%, 100%': { backgroundPosition: '-200% 0' },
+          '50%': { backgroundPosition: '200% 0' },
+        },
+        meshFloat: {
+          '0%, 100%': { transform: 'translate(0px, 0px) rotate(0deg)' },
+          '33%': { transform: 'translate(2px, -2px) rotate(0.5deg)' },
+          '66%': { transform: 'translate(-1px, 1px) rotate(-0.5deg)' },
+        },
+        listHover: {
+          '0%': { transform: 'translateX(0px)', backgroundColor: 'transparent' },
+          '100%': { transform: 'translateX(4px)', backgroundColor: 'rgba(96, 165, 250, 0.05)' },
         },
       },
       transitionDuration: {
