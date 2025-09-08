@@ -88,11 +88,6 @@ export default function WorkPage() {
                                         </div>
                                     )}
 
-                                    <div className="pt-2 border-t border-border">
-                                        <p className="text-xs text-foreground-subtle italic">
-                                            Impact: {experience.impact}
-                                        </p>
-                                    </div>
                                 </div>
                             </div>
                         </article>

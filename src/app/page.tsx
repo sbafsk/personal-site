@@ -38,26 +38,6 @@ export default function Home() {
 
           <section>
             <h2 className="text-lg font-medium text-foreground mb-6">
-              Key Highlights
-            </h2>
-            <ul className="space-y-3">
-              {profile.highlights.map((highlight, index) => (
-                <li
-                  key={index}
-                  className="flex items-start group cursor-default hover:animate-list-hover transition-all duration-300 hover:bg-white/5 hover:backdrop-blur-sm rounded-lg p-2 -mx-2 hover:shadow-light-sm"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary mt-2 mr-3 flex-shrink-0 group-hover:animate-bounce-subtle group-hover:shadow-glow-primary" />
-                  <span className="text-sm text-foreground-muted leading-relaxed group-hover:text-foreground transition-colors duration-300">
-                    {highlight}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-medium text-foreground mb-6">
               Location & Contact
             </h2>
             <div className="space-y-3 text-sm text-foreground-muted">
@@ -98,18 +78,6 @@ export default function Home() {
               </div>
             </div>
           </section>
-        </div>
-
-        {/* Current Status */}
-        <div className="border-t border-border pt-8">
-          <div className="flex items-center mb-4">
-            <span className="inline-block w-2 h-2 rounded-full bg-secondary mr-3" />
-            <span className="text-sm text-foreground-muted">Currently open to new opportunities</span>
-          </div>
-          <div className="space-y-2 text-sm text-foreground-subtle">
-            <p>Based in Montevideo, Uruguay (UTC-3)</p>
-            <p>Specialized in React, Next.js, TypeScript, and GraphQL</p>
-          </div>
         </div>
       </div>
     </MinimalLayout>
