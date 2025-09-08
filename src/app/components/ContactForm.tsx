@@ -108,7 +108,7 @@ export function ContactForm() {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 bg-background-alt border border-border rounded-xl text-sm text-foreground placeholder:text-foreground-subtle focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/30 hover:border-border-subtle transition-all duration-200 shadow-dark-inner focus:shadow-glow-primary"
+                    className="w-full px-3 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl text-sm text-foreground placeholder:text-foreground-subtle focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/30 hover:border-white/20 hover:bg-white/10 transition-all duration-300 shadow-glass focus:shadow-glass-hover hover:animate-lift-hover"
                     placeholder="What's this about?"
                     aria-required="true"
                 />
@@ -125,7 +125,7 @@ export function ContactForm() {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 bg-background border border-border rounded-md text-sm text-foreground resize-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                    className="w-full px-3 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl text-sm text-foreground placeholder:text-foreground-subtle focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary/30 hover:border-white/20 hover:bg-white/10 transition-all duration-300 shadow-glass focus:shadow-glass-hover hover:animate-lift-hover resize-none"
                     placeholder="Tell me about your project or opportunity..."
                     aria-required="true"
                 />
@@ -135,9 +135,27 @@ export function ContactForm() {
                 <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="group px-8 py-3 bg-primary/80 backdrop-blur-sm text-background text-sm font-semibold rounded-xl hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-surface disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:animate-lift-hover active:scale-95 shadow-glass hover:shadow-hover-glow border border-primary/30 hover:border-primary/50"
+                    className="group px-8 py-3 bg-primary/80 backdrop-blur-sm text-background text-sm font-semibold rounded-xl hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-surface disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl disabled:hover:scale-100"
                 >
-                    <span className={`transition-all duration-200 ${isSubmitting ? 'animate-pulse' : ''}`}>
+                    <span className={`flex items-center gap-2 transition-all duration-200 ${isSubmitting ? 'animate-pulse' : ''}`}>
+                        {isSubmitting && (
+                            <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
+                                <circle
+                                    className="opacity-25"
+                                    cx="12"
+                                    cy="12"
+                                    r="10"
+                                    stroke="currentColor"
+                                    strokeWidth="4"
+                                    fill="none"
+                                />
+                                <path
+                                    className="opacity-75"
+                                    fill="currentColor"
+                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                />
+                            </svg>
+                        )}
                         {isSubmitting ? 'Sending...' : 'Send Message'}
                     </span>
                 </button>

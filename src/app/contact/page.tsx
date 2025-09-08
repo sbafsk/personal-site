@@ -30,44 +30,31 @@ export default function ContactPage() {
                             Quick Connect
                         </h2>
                         <div className="space-y-4">
-                            <div className="flex items-center justify-between py-3 px-4 bg-surface rounded-lg hover:bg-surface-hover border border-border transition-colors">
+                            <div className="flex items-center justify-between py-3 px-4 bg-surface/30 backdrop-blur-sm rounded-lg hover:bg-surface/50 hover:backdrop-blur-md transition-all duration-300 group">
                                 <div>
-                                    <p className="text-sm font-medium text-foreground">Email</p>
-                                    <p className="text-xs text-foreground-muted">Direct communication</p>
+                                    <p className="text-sm font-medium text-foreground group-hover:text-foreground/90 transition-colors">Email</p>
+                                    <p className="text-xs text-foreground-muted group-hover:text-foreground-muted/80 transition-colors">Direct communication</p>
                                 </div>
                                 <a
                                     href={`mailto:${profile.email}`}
-                                    className="text-sm text-primary hover:text-primary-hover font-medium transition-colors"
+                                    className="text-sm text-primary hover:text-primary-hover font-medium transition-all duration-300 hover:scale-105"
                                 >
                                     {profile.email}
                                 </a>
                             </div>
 
-                            <div className="flex items-center justify-between py-3 px-4 bg-surface rounded-lg hover:bg-surface-hover border border-border transition-colors">
+                            <div className="flex items-center justify-between py-3 px-4 bg-surface/30 backdrop-blur-sm rounded-lg hover:bg-surface/50 hover:backdrop-blur-md transition-all duration-300 group">
                                 <div>
-                                    <p className="text-sm font-medium text-foreground">LinkedIn</p>
-                                    <p className="text-xs text-foreground-muted">Professional network</p>
+                                    <p className="text-sm font-medium text-foreground group-hover:text-foreground/90 transition-colors">LinkedIn</p>
+                                    <p className="text-xs text-foreground-muted group-hover:text-foreground-muted/80 transition-colors">Professional network</p>
                                 </div>
                                 <a
                                     href={profile.linkedin}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-sm text-primary hover:text-primary-hover font-medium transition-colors"
+                                    className="text-sm text-primary hover:text-primary-hover font-medium transition-all duration-300 hover:scale-105"
                                 >
                                     Connect
-                                </a>
-                            </div>
-
-                            <div className="flex items-center justify-between py-3 px-4 bg-surface rounded-lg hover:bg-surface-hover border border-border transition-colors">
-                                <div>
-                                    <p className="text-sm font-medium text-foreground">Phone</p>
-                                    <p className="text-xs text-foreground-muted">Direct call</p>
-                                </div>
-                                <a
-                                    href={`tel:${profile.phone}`}
-                                    className="text-sm text-primary hover:text-primary-hover font-medium transition-colors"
-                                >
-                                    {profile.phone}
                                 </a>
                             </div>
                         </div>
@@ -75,31 +62,31 @@ export default function ContactPage() {
 
                     {/* Contact Form */}
                     <section>
-                        <h2 className="text-lg font-medium text-foreground mb-6">
+                        <h2 className="text-lg font-medium text-foreground mb-6 group-hover:text-foreground/90 transition-colors">
                             Send a Message
                         </h2>
-                        <div className="bg-surface border border-border rounded-lg p-6">
+                        <div className="bg-white/4 backdrop-blur-md rounded-lg p-6  hover:backdrop-blur-lg shadow-lg hover:shadow-xl transition-all duration-500">
                             <ContactForm />
                         </div>
                     </section>
 
                     {/* Availability */}
                     <section>
-                        <h2 className="text-lg font-medium text-foreground mb-6">
+                        <h2 className="text-lg font-medium text-foreground mb-6 group-hover:text-foreground/90 transition-colors">
                             Availability
                         </h2>
                         <div className="space-y-3 text-sm text-foreground-muted">
-                            <div className="flex items-center">
-                                <span className="inline-block w-2 h-2 rounded-full bg-secondary mr-3" />
-                                <span>Open to new opportunities</span>
+                            <div className="flex items-center group/availability hover:bg-surface/20 hover:backdrop-blur-sm rounded-lg p-2 -mx-2 transition-all duration-300">
+                                <span className="inline-block w-2 h-2 rounded-full bg-secondary mr-3 group-hover/availability:scale-110 transition-transform duration-300" />
+                                <span className="group-hover/availability:text-foreground-muted/90 transition-colors">Open to new opportunities</span>
                             </div>
-                            <div className="flex items-center">
-                                <span className="inline-block w-2 h-2 rounded-full bg-primary mr-3" />
-                                <span>Available for consulting projects</span>
+                            <div className="flex items-center group/availability hover:bg-surface/20 hover:backdrop-blur-sm rounded-lg p-2 -mx-2 transition-all duration-300">
+                                <span className="inline-block w-2 h-2 rounded-full bg-primary mr-3 group-hover/availability:scale-110 transition-transform duration-300" />
+                                <span className="group-hover/availability:text-foreground-muted/90 transition-colors">Available for consulting projects</span>
                             </div>
-                            <div className="flex items-center">
-                                <span className="inline-block w-2 h-2 rounded-full bg-warning mr-3" />
-                                <span>Timezone: UTC-3 (Montevideo, Uruguay)</span>
+                            <div className="flex items-center group/availability hover:bg-surface/20 hover:backdrop-blur-sm rounded-lg p-2 -mx-2 transition-all duration-300">
+                                <span className="inline-block w-2 h-2 rounded-full bg-warning mr-3 group-hover/availability:scale-110 transition-transform duration-300" />
+                                <span className="group-hover/availability:text-foreground-muted/90 transition-colors">Timezone: UTC-3 (Montevideo, Uruguay)</span>
                             </div>
                         </div>
                     </section>
