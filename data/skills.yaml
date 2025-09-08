@@ -16,7 +16,7 @@ skill_categories:
       - name: "React Native"
         level: "Intermediate"
         description: "Mobile development experience"
-        years: 3
+        years: 1
       - name: "HTML5 & CSS3"
         level: "Advanced"
         description: "Semantic markup and modern styling"
@@ -32,11 +32,11 @@ skill_categories:
       - name: "NestJS"
         level: "Intermediate"
         description: "Node.js framework experience"
-        years: 2
+        years: 1
       - name: "Ruby on Rails"
         level: "Intermediate"
         description: "Full-stack development"
-        years: 3
+        years: 2
       - name: "Phoenix (Elixir)"
         level: "Intermediate"
         description: "Functional programming experience"
@@ -52,11 +52,11 @@ skill_categories:
       - name: "Prompt Engineering"
         level: "Advanced"
         description: "AI interaction optimization"
-        years: 2
+        years: 1
       - name: "AI-assisted development"
         level: "Advanced"
-        description: "MCP, BMAD integration"
-        years: 2
+        description: "MCP and BMAD integration"
+        years: 1
       - name: "RPA (Robotic Process Automation)"
         level: "Expert"
         description: "Workflow automation"
@@ -84,19 +84,19 @@ skill_categories:
       - name: "AWS basics"
         level: "Intermediate"
         description: "Cloud infrastructure"
-        years: 2
+        years: 1
 
   - title: "Databases"
     description: "Data management and query optimization"
     skills:
-      - name: "PostgreSQL"
-        level: "Advanced"
-        description: "Relational database"
-        years: 4
       - name: "SQL"
         level: "Advanced"
-        description: "Query optimization"
+        description: "MySQL, PostgreSQL, etc."
         years: 6
+      - name: "Non-SQL"
+        level: "Advanced"
+        description: "MongoDB, Firebase, Supabase, etc."
+        years: 4
 
 # Skill proficiency levels
 proficiency_levels:

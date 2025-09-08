@@ -6,13 +6,11 @@ languages:
     level: "Native"
     proficiency: "native"
     description: "Native language, used for daily communication and professional work"
-    usage: ["Daily communication", "Professional meetings", "Technical documentation"]
 
   - name: "English"
     level: "C1 Advanced"
     proficiency: "advanced"
     description: "Advanced professional proficiency, used for international collaboration"
-    usage: ["International teams", "Technical docs", "Client communication"]
 
 # Proficiency scale
 proficiency_scale:
