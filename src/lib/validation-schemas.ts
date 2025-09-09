@@ -78,9 +78,21 @@ export const validateSkills = (data: unknown) => SkillsDataSchema.parse(data)
 export const validateEducation = (data: unknown) => EducationDataSchema.parse(data)
 export const validateLanguages = (data: unknown) => LanguagesDataSchema.parse(data)
 
+// Contact form validation schema
+export const ContactFormSchema = z.object({
+  name: z.string().min(2, 'Name must be at least 2 characters'),
+  email: z.string().email('Invalid email address'),
+  subject: z.string().min(5, 'Subject must be at least 5 characters'),
+  message: z.string().min(10, 'Message must be at least 10 characters'),
+})
+
+// Contact form validation function
+export const validateContactForm = (data: unknown) => ContactFormSchema.parse(data)
+
 // Type exports for use in components
 export type ValidatedProfile = z.infer<typeof ProfileSchema>
 export type ValidatedWorkExperience = z.infer<typeof WorkExperienceSchema>
 export type ValidatedSkillCategory = z.infer<typeof SkillCategorySchema>
 export type ValidatedEducation = z.infer<typeof EducationSchema>
 export type ValidatedLanguage = z.infer<typeof LanguageSchema>
+export type ContactFormData = z.infer<typeof ContactFormSchema>
