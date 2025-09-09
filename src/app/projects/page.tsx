@@ -7,13 +7,13 @@ const projects = getProjects()
 export default function ProjectsPage() {
     return (
         <MinimalLayout>
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-2xl mx-auto">
                 {/* Header */}
                 <div className="mb-16">
-                    <h1 className="text-4xl font-semibold text-foreground mb-6 tracking-tight">
+                    <h1 className="text-3xl font-semibold text-foreground mb-4 tracking-tight">
                         Projects
                     </h1>
-                    <p className="text-lg text-foreground-muted leading-relaxed">
+                    <p className="text-base text-foreground-muted leading-relaxed">
                         A collection of projects I&apos;ve built, ranging from full-stack platforms to developer tools.
                     </p>
                 </div>

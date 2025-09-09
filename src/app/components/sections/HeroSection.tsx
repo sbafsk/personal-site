@@ -1,9 +1,30 @@
 import { Button } from "../../../components/ui/button"
-import { getProfile } from "../../../lib/data-loader"
+import { getProfile, type Profile } from "../../../lib/data-loader"
 import Link from "next/link"
+import React, { useCallback, useMemo } from 'react'
 
-export function HeroSection() {
-  const profile = getProfile()
+// Props interface following documented standards
+interface HeroSectionProps {
+  profile?: Profile
+  onContactClick?: () => void
+  onProjectsClick?: () => void
+}
+
+export const HeroSection: React.FC<HeroSectionProps> = ({ 
+  profile: externalProfile,
+  onContactClick,
+  onProjectsClick 
+}) => {
+  const profile = useMemo(() => externalProfile ?? getProfile(), [externalProfile])
+  
+  // Event handlers with useCallback for performance
+  const handleContactClick = useCallback(() => {
+    onContactClick?.()
+  }, [onContactClick])
+
+  const handleProjectsClick = useCallback(() => {
+    onProjectsClick?.()
+  }, [onProjectsClick])
 
   return (
     <section className="relative overflow-hidden bg-background">
@@ -35,13 +56,22 @@ export function HeroSection() {
             </div>
 
             <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Button asChild size="lg" className="min-h-[56px] px-8 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200">
+              <Button 
+                onClick={handleContactClick}
+                size="lg" 
+                className="min-h-[56px] px-8 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+              >
                 <Link href="#contact">
                   Get in Touch
                 </Link>
               </Button>
 
-              <Button variant="outline" size="lg" asChild className="min-h-[56px] px-8 text-lg font-semibold border-2 hover:bg-muted/50 transition-all duration-200">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                onClick={handleProjectsClick}
+                className="min-h-[56px] px-8 text-lg font-semibold border-2 hover:bg-muted/50 transition-all duration-200"
+              >
                 <a
                   href={profile.github}
                   target="_blank"
@@ -74,3 +104,14 @@ export function HeroSection() {
     </section>
   )
 }
+
+// Memoized component for performance
+export default React.memo(HeroSection, (prevProps, nextProps) => {
+  return (
+    prevProps.profile?.name === nextProps.profile?.name &&
+    prevProps.profile?.title === nextProps.profile?.title &&
+    prevProps.profile?.tagline === nextProps.profile?.tagline &&
+    prevProps.onContactClick === nextProps.onContactClick &&
+    prevProps.onProjectsClick === nextProps.onProjectsClick
+  )
+})
