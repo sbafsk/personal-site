@@ -9,12 +9,12 @@ export function FloatingSidebar() {
     const pathname = usePathname()
 
     const navItems = [
-        { name: 'Home', href: '/', icon: '◦' },
-        { name: 'Projects', href: '/projects', icon: '◦' },
-        { name: 'Work', href: '/work', icon: '◦' },
-        { name: 'Studies', href: '/studies', icon: '◦' },
-        { name: 'Skills', href: '/skills', icon: '◦' },
-        { name: 'Contact', href: '/contact', icon: '◦' },
+        { name: 'Home', href: '/' },
+        { name: 'Projects', href: '/projects' },
+        { name: 'Work', href: '/work' },
+        { name: 'Studies', href: '/studies' },
+        { name: 'Skills', href: '/skills' },
+        { name: 'Contact', href: '/contact' },
     ]
 
     const isActive = (href: string) => {
@@ -27,7 +27,7 @@ export function FloatingSidebar() {
             {/* Mobile Menu Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed top-6 right-6 z-50 md:hidden w-11 h-11 bg-surface/20 backdrop-blur-xl rounded-xl flex items-center justify-center hover:bg-surface-hover/30 hover:shadow-glass-hover active:scale-95 transition-all duration-300 group shadow-glass border border-white/10 hover:border-white/20 animate-glow-pulse"
+                className="fixed top-6 right-6 z-50 md:hidden w-16 h-11 bg-surface/20 backdrop-blur-xl rounded-xl flex items-center justify-center hover:bg-surface-hover/30 hover:shadow-glass-hover active:scale-95 transition-all duration-300 group shadow-glass"
                 aria-label="Toggle navigation menu"
             >
                 <svg
@@ -53,7 +53,7 @@ export function FloatingSidebar() {
                 role="navigation"
                 aria-label="Main navigation"
             >
-                <div className="bg-surface/15 backdrop-blur-2xl rounded-2xl p-3 shadow-glass hover:shadow-glass-hover transition-all duration-400 animate-fade-in-up border border-white/10 hover:border-white/20 relative overflow-hidden">
+                <div className="bg-surface/15 backdrop-blur-2xl rounded-2xl p-3 shadow-glass hover:shadow-glass-hover transition-all duration-400 relative overflow-hidden">
                     <div className="absolute inset-0 bg-mesh-subtle opacity-30 animate-mesh-float"></div>
                     <div className="relative z-10">
                         <div className="flex flex-col space-y-1">
@@ -61,26 +61,16 @@ export function FloatingSidebar() {
                                 <Link
                                     key={item.name}
                                     href={item.href}
-                                    className={`group relative flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 ease-out-back transform hover:animate-lift-hover active:scale-95 ${isActive(item.href)
-                                        ? 'bg-primary/20 backdrop-blur-sm text-primary shadow-glow-primary border border-primary/30'
-                                        : 'text-foreground-muted hover:text-foreground hover:bg-white/5 hover:shadow-light-sm hover:backdrop-blur-sm hover:animate-list-hover'
+                                    className={`group relative flex items-left px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 ease-out-back transform hover:animate-lift-hover hover:scale-120 hover:shadow-light-sm hover:animate-list-hover ${isActive(item.href)
+                                        ? 'scale-120 shadow-light-sm italic'
+                                        : 'text-foreground-muted hover:text-foreground hover:bg-white/5 '
                                         }`}
                                     onClick={() => setIsOpen(false)}
                                     style={{ animationDelay: `${index * 50}ms` }}
                                 >
-                                    <span className={`mr-3 text-sm transition-all duration-300 ${isActive(item.href)
-                                        ? 'opacity-100 text-primary animate-pulse-subtle'
-                                        : 'opacity-50 group-hover:opacity-100 group-hover:animate-float'
-                                        }`}>
-                                        {item.icon}
-                                    </span>
                                     <span className="whitespace-nowrap font-medium">{item.name}</span>
-                                    {isActive(item.href) && (
-                                        <span className="ml-auto w-2 h-2 bg-primary rounded-full animate-pulse-subtle shadow-glow-primary" />
-                                    )}
 
-                                    {/* Hover effect overlay */}
-                                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
+
                                 </Link>
                             ))}
                         </div>

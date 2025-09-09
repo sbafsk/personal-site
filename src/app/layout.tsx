@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} scroll-smooth bg-background`}>
+    <html lang="en" className={`${inter.variable} scroll-smooth bg-background`} data-scroll-behavior="smooth">
       <body className="font-sans antialiased bg-background text-foreground min-h-screen relative">
         <div className="fixed inset-0 bg-mesh-dark opacity-40 animate-mesh-float pointer-events-none"></div>
         <div className="relative z-10">
