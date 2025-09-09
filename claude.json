@@ -1,0 +1,15 @@
+{
+  "contextFiles": [
+    "docs/index.md",
+    "docs/status/progress.yaml",
+    "standards/coding.md",
+    ".ai/context.yaml"
+  ],
+  "excludePatterns": [
+    "**/node_modules/**",
+    "**/yarn.lock",
+    "**/.git/**"
+  ],
+  "autoSave": true,
+  "maxTokens": 4096
+}
