@@ -8,7 +8,7 @@ projects:
     tags: ["Next.js", "TypeScript", "Supabase", "GraphQL", "TailwindCSS"]
     liveUrl: "https://avant-prop.vercel.app/"
     githubUrl: "https://github.com/sbafsk/avent-properties"
-    status: "Live"
+    status: "Active Development"
     type: "Full Stack Platform"
 
   - id: "maicemita"
@@ -17,11 +17,11 @@ projects:
     tags: ["Next.js", "React", "E-commerce", "TailwindCSS", "Responsive Design"]
     liveUrl: "https://maicemita-site.vercel.app/"
     githubUrl: "https://github.com/sbafsk/maicemita-site"
-    status: "Live"
+    status: "Active Development"
     type: "E-commerce Site"
 
   - id: "personal-site"
-    title: "Personal Portfolio"
+    title: "Personal Portfolio (this site)"
     description: "Minimalistic personal portfolio website built with Next.js, TypeScript, and Tailwind CSS featuring dark theme and floating sidebar navigation."
     tags: ["Next.js", "TypeScript", "TailwindCSS", "Responsive Design", "Accessibility"]
     liveUrl: "https://personal-site-lpwaqlv2j-sbafsks-projects.vercel.app/"
@@ -30,12 +30,12 @@ projects:
     type: "Portfolio Site"
 
   - id: "mcp-documentation-hub"
-    title: "MCP Documentation Hub"
-    description: "Comprehensive documentation hub for Model Context Protocol (MCP) with AI-friendly structure and development tools."
-    tags: ["Documentation", "MCP", "AI Tools", "Developer Experience"]
-    githubUrl: "https://github.com/sbafsk/mcp-documentation-hub"
+    title: "AI Assistant Development Kit"
+    description: "A collection of boilerplates and patterns for building AI-enhanced development environments. Features project templates, documentation architecture, and MCP integration for AI coding assistants like Cursor, Claude, and GitHub Copilot."
+    tags: ["Next.js", "TypeScript", "Elixir", "Phoenix", "Flutter", "MCP", "AI Tools", "Boilerplates", "Documentation"]
+    githubUrl: "https://github.com/sbafsk/ai-assistant-development-kit"
     status: "Active Development"
-    type: "Documentation Platform"
+    type: "Development Kit"
 
 # Project status types
 status_types:
@@ -50,5 +50,6 @@ project_types:
   e_commerce: "E-commerce platforms"
   portfolio: "Personal portfolio sites"
   documentation: "Documentation and developer tools"
+  development_kit: "Development kits and boilerplates"
   mobile: "Mobile applications"
   desktop: "Desktop applications"
