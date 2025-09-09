@@ -110,7 +110,7 @@ export function URLPreview({ url, position }: URLPreviewProps) {
                 top: adjustedY,
             }}
         >
-            <div className="bg-surface/90 backdrop-blur-xl rounded-xl p-4 shadow-glass border border-border/30 hover:border-border/40 max-w-[320px] animate-scale-in transition-colors duration-200">
+            <div className="bg-surface/90 backdrop-blur-xl rounded-xl p-4 shadow-glass hover:shadow-glass-hover max-w-[320px] animate-scale-in transition-all duration-200">
                 {/* Header */}
                 <div className="flex items-start gap-3 mb-3">
                     <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/15 border border-primary/20 flex items-center justify-center">
