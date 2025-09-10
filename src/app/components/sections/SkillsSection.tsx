@@ -1,10 +1,22 @@
 import { Section } from "../ui/Section"
 import { SectionHeader } from "../ui/SectionHeader"
 import { Card, CardContent, CardHeader, CardTitle } from "../../../components/ui/card"
-import { getSkills } from "../../../lib/data-loader"
+import { getSkills, type SkillCategory } from "../../../lib/data-loader"
+import React, { useMemo } from 'react'
 
-export function SkillsSection() {
-  const skillCategories = getSkills()
+// Props interface following documented standards
+interface SkillsSectionProps {
+  skillCategories?: SkillCategory[]
+  showYearsOfExperience?: boolean
+  onSkillClick?: (skillName: string, category: string) => void
+}
+
+export const SkillsSection: React.FC<SkillsSectionProps> = ({ 
+  skillCategories: externalSkills,
+  showYearsOfExperience = true,
+  onSkillClick 
+}) => {
+  const skillCategories = useMemo(() => externalSkills ?? getSkills(), [externalSkills])
 
   return (
     <Section id="skills" background="gray">
@@ -27,13 +39,19 @@ export function SkillsSection() {
             <CardContent>
               <div className="space-y-3">
                 {category.skills.map((skill) => (
-                  <div key={skill.name} className="flex items-center justify-between">
+                  <div 
+                    key={skill.name} 
+                    className="flex items-center justify-between cursor-pointer hover:bg-muted/20 p-2 rounded-lg transition-colors"
+                    onClick={() => onSkillClick?.(skill.name, category.title)}
+                  >
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
                       <span className="text-card-foreground">{skill.name}</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <span className="text-xs text-muted-foreground">{skill.years}y</span>
+                      {showYearsOfExperience && (
+                        <span className="text-xs text-muted-foreground">{skill.years}y</span>
+                      )}
                       <span className={`text-xs px-3 py-1 rounded-full font-medium ${skill.level === 'Expert' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
                         skill.level === 'Advanced' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
                           skill.level === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' :
@@ -52,3 +70,12 @@ export function SkillsSection() {
     </Section>
   )
 }
+
+// Memoized component for performance
+export default React.memo(SkillsSection, (prevProps, nextProps) => {
+  return (
+    prevProps.skillCategories === nextProps.skillCategories &&
+    prevProps.showYearsOfExperience === nextProps.showYearsOfExperience &&
+    prevProps.onSkillClick === nextProps.onSkillClick
+  )
+})
