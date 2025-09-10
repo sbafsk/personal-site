@@ -78,13 +78,22 @@ personal-site/
 - Multiple format support
 - Professional styling
 
-## Related Documentation
+## Documentation Structure
 
-- [Current Status](docs/status/progress.yaml)
-- [Architecture](docs/architecture/overview.md)
-- [Design System](docs/design-system/components.md)
-- [Setup Guide](docs/guides/setup.md)
-- [Coding Standards](standards/coding.md)
+### Core Documentation
+- [Current Status](status/progress.yaml) - Single source of truth for project status and deployment info
+- [Architecture](architecture/overview.md) - Technical implementation details
+- [Design System](design-system/components.md) - UI/UX guidelines, components, and styling
+- [Content Guidelines](content.md) - Content structure and tone guidelines
+
+### Setup & Development
+- [Setup Guide](guides/setup.md) - Environment setup with shadcn/ui and MCP integration
+- [Git Commit Guidelines](guides/git-commit-guidelines.md) - Development workflow standards
+- [Pull Request Guidelines](guides/pull-request-guidelines.md) - Code review and PR process
+
+### Specialized Documentation
+- [Accessibility Report](accessibility-report.md) - WCAG 2.1 AA compliance details
+- [Coding Standards](standards/coding.md) - Development standards and best practices
 
 ## Getting Help
 
