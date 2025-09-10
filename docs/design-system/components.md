@@ -15,11 +15,35 @@ Sebastián's Personal Site uses shadcn/ui components with a consistent design la
 - **Secondary**: Gray-700 (#374151) - Text and borders
 - **Accent**: Emerald-500 (#10b981) - Success and highlights
 
+### Extended Color System
+```css
+/* Blue - Primary brand color */
+--blue-50: #EFF6FF
+--blue-100: #DBEAFE
+--blue-500: #3B82F6
+--blue-600: #2563EB
+--blue-700: #1D4ED8
+
+/* Gray - Secondary and text colors */
+--gray-50: #F9FAFB
+--gray-100: #F3F4F6
+--gray-200: #E5E7EB
+--gray-600: #4B5563
+--gray-700: #374151
+--gray-900: #111827
+```
+
 ### Semantic Colors
 - **Success**: Green-500 (#22c55e)
 - **Warning**: Yellow-500 (#eab308)
 - **Error**: Red-500 (#ef4444)
 - **Info**: Blue-500 (#3b82f6)
+
+### Usage Guidelines
+- **Blue**: Primary actions, links, and important elements
+- **Gray**: Text, borders, and secondary information
+- **White**: Backgrounds and content areas
+- **Green/Red**: Success and error states only
 
 ## Typography
 
@@ -442,6 +466,94 @@ const Header = () => {
 - Avoid animating layout properties
 - Use `will-change` sparingly
 - Test on lower-end devices
+
+## Responsive Design Guidelines
+
+### Breakpoints
+- **Mobile**: < 768px (default)
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
+
+### Mobile-First Approach
+- Start with mobile layout
+- Use `md:` and `lg:` prefixes for larger screens
+- Ensure touch-friendly button sizes (min 44px)
+- Optimize spacing for mobile viewing
+
+### Grid System
+```tsx
+// Responsive Grid Layouts
+<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+  {/* Content adapts from 1 column (mobile) to 3 columns (desktop) */}
+</div>
+```
+
+## Accessibility Guidelines
+
+### WCAG 2.1 AA Compliance
+- **Color Contrast**: Minimum 4.5:1 for normal text, 3:1 for large text
+- **Focus Indicators**: Visible focus rings on all interactive elements
+- **Touch Targets**: Minimum 44x44px for mobile usability
+- **Screen Reader**: Full ARIA support and semantic HTML
+
+### ARIA Implementation
+```tsx
+// Navigation
+<nav role="navigation" aria-label="Main navigation">
+
+// Menu Items
+<div role="menubar">
+  <a role="menuitem" aria-label="Go to section">Section</a>
+</div>
+
+// Forms
+<form role="form" aria-labelledby="form-title" aria-describedby="form-instructions">
+
+// Skip Links
+<a href="#main-content" className="sr-only focus:not-sr-only">
+  Skip to main content
+</a>
+```
+
+### Keyboard Navigation
+```tsx
+// Focus Management
+className="focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+
+// Skip Link
+<a href="#main-heading" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50">
+  Skip to main content
+</a>
+```
+
+## Performance Guidelines
+
+### CSS Best Practices
+```css
+/* Use CSS transitions instead of JavaScript animations */
+transition-colors: color 150ms ease-in-out
+transition-transform: transform 200ms ease-out
+
+/* Hardware acceleration for animations */
+transform-gpu: transform: translateZ(0)
+
+/* Optimize for mobile */
+min-h-[44px]: min-height: 44px /* Touch target size */
+```
+
+### Image Optimization
+```tsx
+// Next.js Image component for optimization
+import Image from 'next/image'
+
+<Image
+  src="/image.jpg"
+  alt="Descriptive alt text"
+  width={400}
+  height={300}
+  priority={false} // Set to true for above-the-fold images
+/>
+```
 
 ## Related Documentation
 

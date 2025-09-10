@@ -39,6 +39,20 @@ npx shadcn@latest init
 # - Include example components: No
 ```
 
+### 2.1. Configure MCP for Cursor (Recommended)
+```bash
+# Initialize MCP server for shadcn/ui integration
+npx shadcn@latest mcp init --client cursor
+
+# This creates .cursor/mcp.json in your project root
+```
+
+**Enable in Cursor:**
+1. Open Cursor Settings
+2. Navigate to MCP servers
+3. Enable the shadcn server (should show green dot)
+4. You can now use natural language prompts to add components
+
 ### 3. Install Required shadcn/ui Components
 ```bash
 # Install components needed for the site
@@ -333,6 +347,26 @@ export const projects: Project[] = [
 ```
 
 ## Development Workflow
+
+### Using MCP for Efficient Development
+
+With the MCP server configured, you can use natural language prompts in Cursor:
+
+**Component Installation:**
+- "Add the button component to my project"
+- "Install card, dialog, and form components"
+- "Show me all available components in the shadcn registry"
+
+**Building UI Sections:**
+- "Create a contact form using shadcn components"
+- "Build a hero section with shadcn components"
+- "Generate a project card component with glassmorphism design"
+
+**Advanced Usage:**
+- Components are copied directly to `@/components/ui/` for full customization
+- Modify Tailwind classes within component files
+- Update global CSS variables for theming
+- Bundle size stays minimal with only needed components
 
 ### Available Scripts
 

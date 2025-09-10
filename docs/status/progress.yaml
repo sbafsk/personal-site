@@ -327,6 +327,20 @@ business_value:
     - "Quality Focus: Professional-grade development standards"
     - "AI Integration: MCP-ready for future automation"
 
+# Deployment Information
+deployment_status:
+  status: "✅ Production Ready & Deployed"
+  platform: "Vercel"
+  url: "https://personal-site-5pp5fieci-sbafsks-projects.vercel.app"
+  last_deployed: "September 2025"
+  build_time: "~9.8 seconds"
+  performance_metrics:
+    first_load_js: "198 kB (vendor 196 kB + app ~2 kB)"
+    route_sizes: "Home/Skills/Studies/Work ~115 B; Contact ~1.41 kB"
+    static_generation: "All routes prerendered (9/9)"
+    code_splitting: "Automatic + vendor chunk separation"
+  github_repo: "https://github.com/sbafsk/personal-site"
+
 # Future Roadmap
 future_roadmap:
   short_term: "Next 2 weeks - Complete Phase 3, deploy to production, set up CI/CD"
