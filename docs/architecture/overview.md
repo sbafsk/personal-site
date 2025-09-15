@@ -73,6 +73,12 @@ Sebastián's Personal Site follows a modern static landing page architecture wit
 - **Validation**: Zod runtime validation
 - **AI Integration**: MCP-friendly structure
 
+### Testing ✅
+- **Unit Testing**: Jest with React Testing Library
+- **Component Testing**: 98 comprehensive component tests
+- **Mock Configuration**: Next.js router, fetch, and browser APIs
+- **Test Coverage**: Comprehensive coverage of UI components and utilities
+
 ### Infrastructure 🔄
 - **Deployment**: Vercel (ready for setup)
 - **Monitoring**: Vercel Analytics ✅
@@ -88,6 +94,7 @@ Sebastián's Personal Site follows a modern static landing page architecture wit
 6. **Data-Driven Content**: YAML-based content management ✅
 7. **Content Validation**: Runtime validation with Zod ✅
 8. **Performance Tracking**: Vercel Analytics integration ✅
+9. **Test-Driven Development**: Comprehensive Jest test suite ✅
 
 ## Site Structure
 

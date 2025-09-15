@@ -70,6 +70,9 @@ yarn add lucide-react
 # Email handling (for contact form)
 yarn add nodemailer @types/nodemailer
 
+# Testing framework
+yarn add -D jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom @testing-library/user-event @types/jest
+
 # Optional: Animation library
 yarn add framer-motion
 ```
@@ -93,12 +96,153 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 NEXT_PUBLIC_SITE_NAME="Sebastián Pereira Rivero - Personal Site"
 ```
 
-### 6. Start Development Server
+### 6. Configure Testing Environment
+
+Create Jest configuration file:
+```bash
+# Create jest.config.js
+cat > jest.config.js << 'EOF'
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+  dir: './',
+})
+
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jest-environment-jsdom',
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/app/layout.tsx',
+    '!src/app/**/page.tsx',
+  ],
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/',
+    '<rootDir>/node_modules/',
+  ],
+}
+
+module.exports = createJestConfig(customJestConfig)
+EOF
+
+# Create jest.setup.js
+cat > jest.setup.js << 'EOF'
+import '@testing-library/jest-dom'
+
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '/',
+      query: {},
+      asPath: '/',
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn().mockResolvedValue(undefined),
+      beforePopState: jest.fn(),
+      events: {
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+      isFallback: false,
+    }
+  },
+}))
+
+// Mock Next.js navigation
+jest.mock('next/navigation', () => ({
+  useRouter() {
+    return {
+      push: jest.fn(),
+      replace: jest.fn(),
+      prefetch: jest.fn(),
+      back: jest.fn(),
+      forward: jest.fn(),
+      refresh: jest.fn(),
+    }
+  },
+  useSearchParams() {
+    return new URLSearchParams()
+  },
+  usePathname() {
+    return '/'
+  },
+}))
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+}
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+}
+
+// Mock fetch API
+global.fetch = jest.fn()
+
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+})
+EOF
+```
+
+Add test scripts to package.json:
+```json
+{
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci --coverage --watchAll=false"
+  }
+}
+```
+
+### 7. Start Development Server
 ```bash
 yarn dev
 ```
 
 Your application should now be running at `http://localhost:3000`
+
+### 8. Run Tests
+```bash
+# Run all tests
+yarn test
+
+# Run tests in watch mode
+yarn test:watch
+
+# Run tests with coverage
+yarn test:coverage
+```
 
 ## Detailed Setup
 
@@ -378,7 +522,10 @@ With the MCP server configured, you can use natural language prompts in Cursor:
     "start": "Production server",
     "lint": "Code linting",
     "type-check": "TypeScript type checking",
-    "format": "Format code with Prettier"
+    "test": "Run Jest tests",
+    "test:watch": "Run tests in watch mode",
+    "test:coverage": "Run tests with coverage report",
+    "test:ci": "Run tests for CI/CD pipeline"
   }
 }
 ```
@@ -388,6 +535,8 @@ With the MCP server configured, you can use natural language prompts in Cursor:
 - **ESLint**: Code linting and formatting
 - **Prettier**: Code formatting
 - **TypeScript**: Type checking
+- **Jest**: Unit and integration testing
+- **React Testing Library**: Component testing utilities
 - **Husky**: Git hooks for quality checks (optional)
 
 ## Troubleshooting
