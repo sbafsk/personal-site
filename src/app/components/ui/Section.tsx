@@ -8,6 +8,7 @@ interface SectionProps {
     background?: "white" | "gray" | "blue"
     padding?: "sm" | "md" | "lg"
     ariaLabelledby?: string
+    'data-testid'?: string
 }
 
 export function Section({
@@ -16,7 +17,9 @@ export function Section({
     className,
     background = "white",
     padding = "lg",
-    ariaLabelledby
+    ariaLabelledby,
+    'data-testid': dataTestId,
+    ...props
 }: SectionProps) {
     const backgroundClasses = {
         white: "bg-background",
@@ -39,6 +42,8 @@ export function Section({
                 className
             )}
             aria-labelledby={ariaLabelledby}
+            data-testid={dataTestId}
+            {...props}
         >
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 {children}
