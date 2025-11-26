@@ -16,9 +16,9 @@ export function ContactSection() {
 
       <div className="mt-20 grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div>
-          <Card className="bg-card border-border group hover:shadow-lg transition-all duration-300">
+          <Card className="group">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold text-card-foreground">Get in Touch</CardTitle>
+              <CardTitle className="text-xl font-semibold text-card-foreground title-hover cursor-pointer">Get in Touch</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -86,9 +86,9 @@ export function ContactSection() {
         </div>
 
         <div>
-          <Card className="bg-card border-border group hover:shadow-lg transition-all duration-300">
+          <Card className="group">
             <CardHeader>
-              <CardTitle className="text-xl font-semibold text-card-foreground">Send a Message</CardTitle>
+              <CardTitle className="text-xl font-semibold text-card-foreground title-hover cursor-pointer">Send a Message</CardTitle>
             </CardHeader>
             <CardContent>
               <ContactForm />

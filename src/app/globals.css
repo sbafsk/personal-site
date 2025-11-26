@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
-/* Dark theme by default - no light mode */
+/*
+ * Design System Base Styles
+ * Color, spacing, and animation tokens are now managed in tailwind.config.js
+ * This file contains only global styles and custom classes
+ */
+
+/* Universal styles */
 * {
   box-sizing: border-box;
 }
@@ -9,49 +15,18 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #0a0e13;
-  color: #f1f5f9;
   min-height: 100vh;
 }
 
 #__next,
 #root {
   min-height: 100vh;
-  background-color: #0a0e13;
 }
 
-/* Custom animations inspired by modern design */
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes glow {
-
-  0%,
-  100% {
-    opacity: 0.5;
-  }
-
-  50% {
-    opacity: 0.8;
-  }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-glow {
-  animation: glow 4s ease-in-out infinite;
-}
+/*
+ * Custom animations are now defined in tailwind.config.js
+ * Use Tailwind animation utilities like: animate-float, animate-glow-pulse, etc.
+ */
 
 /* Smooth scroll behavior */
 html {
@@ -62,4 +37,305 @@ html {
 *:focus-visible {
   outline: 2px solid oklch(0.7 0.15 220);
   outline-offset: 2px;
+}
+
+/* Universal hover effects for titles and subtitles */
+.title-hover {
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.title-hover:hover {
+  transform: scale(1.02);
+}
+
+.subtitle-hover {
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subtitle-hover:hover {
+  transform: scale(1.01);
+}
+
+/*
+ * Mesh and glass animations moved to tailwind.config.js
+ * Use utilities: animate-mesh-ultra-slow, animate-glass-shimmer
+ */
+
+/* Professional Glass Morphism Effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, backdrop-filter, box-shadow;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5), 0 0 40px rgba(96, 165, 250, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Theme-aware glass effects */
+.dark .glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass-card:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4), 0 0 40px rgba(96, 165, 250, 0.3);
+}
+
+:root .glass-card {
+  background: rgba(0, 0, 0, 0.12);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+:root .glass-card:hover {
+  background: rgba(0, 0, 0, 0.18);
+  border-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.15), 0 0 40px rgba(0, 102, 255, 0.2);
+}
+
+/* Glass morphism for navigation */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glass-nav:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.5);
+}
+
+/* Professional Micro-Interactions */
+.magnetic-button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.magnetic-button:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.title-enhanced {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.title-enhanced:hover {
+  letter-spacing: 0.5px;
+  transform: scale(1.02);
+  color: var(--color-primary);
+}
+
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: width 0.25s ease-in-out;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Navigation enhanced interactions */
+.nav-item {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav-item:hover {
+  transform: scale(1.05) translateX(2px);
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: height 0.3s ease;
+}
+
+.nav-item:hover::before {
+  height: 100%;
+}
+
+/* Card tag hover effects */
+.tag-hover {
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tag-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.tag-hover:hover::before {
+  left: 100%;
+}
+
+.tag-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Staggered animation utilities */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: staggerIn 0.6s ease-out forwards;
+}
+
+@keyframes staggerIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Focus states with gentle glow */
+.focus-glow:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primary), 0 0 20px rgba(96, 165, 250, 0.3);
+  transition: box-shadow 0.2s ease;
+}
+
+/* Mobile touch optimizations */
+@media (max-width: 768px) {
+
+  .title-hover:active,
+  .subtitle-hover:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Performance optimizations for 60fps */
+.performance-optimized {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-auto {
+  will-change: auto;
+}
+
+/* Hardware acceleration for animations */
+.glass-card,
+.nav-item,
+.magnetic-button,
+.title-enhanced {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+/* Intersection Observer optimization classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Memory-efficient hover states */
+.efficient-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.efficient-hover:hover {
+  transform: translateY(-2px);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+  .title-hover,
+  .subtitle-hover,
+  .nav-item,
+  .magnetic-button,
+  .title-enhanced,
+  .link-underline,
+  .tag-hover {
+    transition: none;
+  }
+
+  .title-hover:hover,
+  .subtitle-hover:hover,
+  .nav-item:hover,
+  .magnetic-button:hover,
+  .title-enhanced:hover {
+    transform: none;
+  }
+
+  .animate-mesh-ultra-slow,
+  .animate-mesh-float,
+  .animate-glass-shimmer,
+  .stagger-item {
+    animation: none;
+  }
+
+  /* Provide static fallbacks */
+  .animate-mesh-ultra-slow {
+    opacity: 0.8;
+  }
+
+  .stagger-item {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Low power mode optimizations */
+@media (prefers-reduced-motion: reduce) and (max-resolution: 144dpi) {
+  .glass-card {
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-nav {
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.08);
+  }
 }

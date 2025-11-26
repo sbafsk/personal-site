@@ -14,7 +14,7 @@ export default function WorkPage() {
         <MinimalLayout>
             <div className="max-w-2xl mx-auto">
                 <div className="mb-16">
-                    <h1 className="text-3xl font-semibold text-foreground mb-4 tracking-tight">
+                    <h1 className="text-3xl font-semibold text-foreground mb-4 tracking-tight title-hover cursor-pointer">
                         Work
                     </h1>
                     <p className="text-base text-foreground-muted leading-relaxed">

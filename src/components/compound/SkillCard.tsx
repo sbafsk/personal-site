@@ -91,7 +91,7 @@ SkillCard.Container = function SkillCardContainer({
 
   return (
     <Card className={cn(
-      'h-full group bg-surface/30 backdrop-blur-md border border-white/5 hover:bg-surface/40 hover:border-white/10 transition-all duration-500 hover:shadow-glass',
+      'h-full group bg-white/5 backdrop-blur-xl hover:bg-white/10 transition-all duration-300 hover:shadow-glass-hover',
       isSelected && 'ring-2 ring-primary shadow-glass',
       className
     )}>
@@ -123,7 +123,7 @@ SkillCard.Title = function SkillCardTitle({
 
   return (
     <CardTitle className={cn(
-      'text-lg font-semibold transition-colors duration-200',
+      'text-lg font-semibold transition-all duration-300 group-hover:scale-105 group-hover:italic',
       isSelected ? 'text-primary' : 'text-card-foreground group-hover:text-primary',
       className
     )}>

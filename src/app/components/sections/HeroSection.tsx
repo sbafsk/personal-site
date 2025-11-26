@@ -10,13 +10,13 @@ interface HeroSectionProps {
   onProjectsClick?: () => void
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ 
+export const HeroSection: React.FC<HeroSectionProps> = ({
   profile: externalProfile,
   onContactClick,
-  onProjectsClick 
+  onProjectsClick
 }) => {
   const profile = useMemo(() => externalProfile ?? getProfile(), [externalProfile])
-  
+
   // Event handlers with useCallback for performance
   const handleContactClick = useCallback(() => {
     onContactClick?.()
@@ -33,7 +33,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="mx-auto max-w-5xl text-center">
             <div className="mb-12">
               <h1
-                className="text-5xl font-bold tracking-tight text-foreground sm:text-7xl lg:text-8xl"
+                className="text-5xl font-bold tracking-tight text-foreground sm:text-7xl lg:text-8xl title-hover cursor-pointer"
                 id="main-heading"
               >
                 {profile.name}
@@ -42,7 +42,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
 
             <div className="space-y-6">
-              <p className="text-2xl leading-9 text-foreground font-semibold" role="doc-subtitle">
+              <p className="text-2xl leading-9 text-foreground font-semibold subtitle-hover cursor-pointer" role="doc-subtitle">
                 {profile.title} with 7+ years of experience
               </p>
 
@@ -56,9 +56,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
 
             <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Button 
+              <Button
                 onClick={handleContactClick}
-                size="lg" 
+                size="lg"
                 className="min-h-[56px] px-8 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
               >
                 <Link href="#contact">
@@ -66,9 +66,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 </Link>
               </Button>
 
-              <Button 
-                variant="outline" 
-                size="lg" 
+              <Button
+                variant="outline"
+                size="lg"
                 onClick={handleProjectsClick}
                 className="min-h-[56px] px-8 text-lg font-semibold border-2 hover:bg-muted/50 transition-all duration-200"
               >

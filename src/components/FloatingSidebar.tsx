@@ -3,10 +3,13 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useTheme } from '@/contexts/ThemeContext'
+import { Sun, Moon } from 'lucide-react'
 
 export function FloatingSidebar() {
     const [isOpen, setIsOpen] = useState(false)
     const pathname = usePathname()
+    const { theme, toggleTheme } = useTheme()
 
     const navItems = [
         { name: 'Home', href: '/' },
@@ -27,7 +30,7 @@ export function FloatingSidebar() {
             {/* Mobile Menu Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed top-6 right-6 z-50 md:hidden w-16 h-11 bg-surface/20 backdrop-blur-xl rounded-xl flex items-center justify-center hover:bg-surface-hover/30 hover:shadow-glass-hover active:scale-95 transition-all duration-300 group shadow-glass"
+                className="fixed top-6 right-6 z-50 md:hidden w-16 h-11 glass-nav rounded-xl flex items-center justify-center active:scale-95 transition-all duration-300 group"
                 aria-label="Toggle navigation menu"
             >
                 <svg
@@ -53,17 +56,17 @@ export function FloatingSidebar() {
                 role="navigation"
                 aria-label="Main navigation"
             >
-                <div className="bg-surface/15 backdrop-blur-2xl rounded-2xl p-3 shadow-glass hover:shadow-glass-hover transition-all duration-400 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-mesh-subtle opacity-30 animate-mesh-float"></div>
+                <div className="glass-nav rounded-2xl p-3 transition-all duration-400 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-mesh-subtle opacity-30 animate-mesh-ultra-slow"></div>
                     <div className="relative z-10">
                         <div className="flex flex-col space-y-1">
                             {navItems.map((item, index) => (
                                 <Link
                                     key={item.name}
                                     href={item.href}
-                                    className={`group relative flex items-left px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300 ease-out-back transform hover:animate-lift-hover hover:scale-120 hover:shadow-light-sm hover:animate-list-hover ${isActive(item.href)
-                                        ? 'scale-120 shadow-light-sm italic'
-                                        : 'text-foreground-muted hover:text-foreground hover:bg-white/5 '
+                                    className={`nav-item group relative flex items-left px-4 py-3 text-sm font-medium rounded-xl focus-glow transition-all duration-200 ${isActive(item.href)
+                                        ? 'bg-white/15 text-primary dark:text-primary-dark shadow-light-sm dark:shadow-dark-sm font-semibold'
+                                        : 'text-foreground-muted dark:text-foreground-dark-muted hover:text-foreground dark:hover:text-foreground-dark hover:bg-white/10'
                                         }`}
                                     onClick={() => setIsOpen(false)}
                                     style={{ animationDelay: `${index * 50}ms` }}
@@ -73,6 +76,34 @@ export function FloatingSidebar() {
 
                                 </Link>
                             ))}
+
+                            {/* Separator */}
+                            <div className="my-2 h-px bg-white/10"></div>
+
+                            {/* Theme Toggle */}
+                            <button
+                                onClick={toggleTheme}
+                                className="nav-item group relative flex items-center px-4 py-3 text-sm font-medium rounded-xl focus-glow text-foreground-muted dark:text-foreground-dark-muted hover:text-foreground dark:hover:text-foreground-dark hover:bg-white/10 transition-all duration-200"
+                                aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
+                            >
+                                <div className="relative w-5 h-5 overflow-hidden mr-3">
+                                    <Sun
+                                        className={`absolute inset-0 w-5 h-5 text-amber-400 transition-all duration-300 ${theme === 'light'
+                                                ? 'rotate-0 scale-100 opacity-100'
+                                                : 'rotate-180 scale-75 opacity-0'
+                                            }`}
+                                    />
+                                    <Moon
+                                        className={`absolute inset-0 w-5 h-5 text-blue-300 transition-all duration-300 ${theme === 'dark'
+                                                ? 'rotate-0 scale-100 opacity-100'
+                                                : '-rotate-180 scale-75 opacity-0'
+                                            }`}
+                                    />
+                                </div>
+                                <span className="whitespace-nowrap font-medium">
+                                    {theme === 'light' ? 'Dark' : 'Light'} Mode
+                                </span>
+                            </button>
                         </div>
 
                         {/* Floating indicator */}
@@ -84,7 +115,7 @@ export function FloatingSidebar() {
             {/* Mobile Overlay */}
             {isOpen && (
                 <div
-                    className="fixed inset-0 bg-background/80 backdrop-blur-sm z-30 md:hidden"
+                    className="fixed inset-0 bg-background/80 dark:bg-background-dark/80 backdrop-blur-sm z-30 md:hidden transition-colors duration-300"
                     onClick={() => setIsOpen(false)}
                 />
             )}

@@ -40,7 +40,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
     return (
         <>
             <article
-                className="group relative bg-surface/8 backdrop-blur-sm rounded-2xl p-8 border border-border/30 hover:border-border/50 transition-all duration-500 hover:shadow-glass hover:bg-surface/15 animate-fade-in-up"
+                className="group relative glass-card rounded-2xl p-8 animate-fade-in-up overflow-hidden"
                 style={{ animationDelay: `${index * 150}ms` }}
                 onMouseMove={handleMouseMove}
             >
@@ -48,14 +48,14 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 <div className="flex items-start justify-between mb-6">
                     <div>
                         <div className="flex items-center gap-3 mb-2">
-                            <h3 className="text-2xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                            <h3 className="title-enhanced text-2xl font-semibold text-foreground cursor-pointer">
                                 {project.title}
                             </h3>
                             <span className="px-3 py-1 text-xs font-medium bg-primary/15 text-primary rounded-full border border-primary/20">
                                 {project.status}
                             </span>
                         </div>
-                        <p className="text-sm text-foreground-muted font-medium">
+                        <p className="text-sm text-foreground-muted font-medium transition-all duration-300 group-hover:scale-102 group-hover:italic group-hover:text-foreground/90">
                             {project.type}
                         </p>
                     </div>
@@ -67,7 +67,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                                 href={project.liveUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-2 rounded-lg bg-primary/15 text-primary hover:bg-primary/25 border border-primary/20 hover:border-primary/30 transition-all duration-200 hover:scale-110 active:scale-95"
+                                className="magnetic-button focus-glow p-2 rounded-lg bg-primary/15 text-primary hover:bg-primary/25 border border-primary/20 hover:border-primary/30"
                                 onMouseEnter={(e) => handleLinkHover(project.liveUrl!, e)}
                                 onMouseLeave={handleLinkLeave}
                                 onMouseMove={handleMouseMove}
@@ -80,7 +80,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                             href={project.githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="p-2 rounded-lg bg-surface/25 text-foreground hover:bg-surface/35 border border-border/30 hover:border-border/50 transition-all duration-200 hover:scale-110 active:scale-95"
+                            className="magnetic-button focus-glow p-2 rounded-lg bg-surface/25 text-foreground hover:bg-surface/35 border border-border/30 hover:border-border/50"
                             onMouseEnter={(e) => handleLinkHover(project.githubUrl, e)}
                             onMouseLeave={handleLinkLeave}
                             onMouseMove={handleMouseMove}
@@ -101,7 +101,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                     {project.tags.map((tag, tagIndex) => (
                         <span
                             key={tag}
-                            className="px-3 py-1 text-xs font-medium bg-surface/25 text-foreground-muted rounded-full hover:bg-surface/40 hover:text-foreground border border-border/20 hover:border-border/30 transition-all duration-200 animate-fade-in"
+                            className="tag-hover px-3 py-1 text-xs font-medium bg-surface/25 text-foreground-muted rounded-full hover:bg-surface/40 hover:text-foreground border border-border/20 hover:border-border/30 cursor-pointer stagger-item"
                             style={{ animationDelay: `${(index * 150) + (tagIndex * 50)}ms` }}
                         >
                             {tag}
@@ -116,7 +116,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                             href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-foreground-muted hover:text-primary transition-colors duration-200 group/link"
+                            className="link-underline flex items-center gap-2 text-foreground-muted hover:text-primary transition-colors duration-200 group/link focus-glow"
                             onMouseEnter={(e) => handleLinkHover(project.liveUrl!, e)}
                             onMouseLeave={handleLinkLeave}
                             onMouseMove={handleMouseMove}
@@ -129,7 +129,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-foreground-muted hover:text-foreground transition-colors duration-200 group/link"
+                        className="link-underline flex items-center gap-2 text-foreground-muted hover:text-foreground transition-colors duration-200 group/link focus-glow"
                         onMouseEnter={(e) => handleLinkHover(project.githubUrl, e)}
                         onMouseLeave={handleLinkLeave}
                         onMouseMove={handleMouseMove}

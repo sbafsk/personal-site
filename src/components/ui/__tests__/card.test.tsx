@@ -15,8 +15,9 @@ describe('Card Components', () => {
       render(<Card data-testid="card">Card content</Card>)
 
       const card = screen.getByTestId('card')
-      expect(card).toHaveClass('rounded-lg', 'border', 'bg-card', 'text-card-foreground')
-      expect(card).toHaveClass('shadow-sm', 'hover:shadow-md', 'transition-all')
+      expect(card).toHaveClass('rounded-xl', 'bg-white/10', 'backdrop-blur-xl', 'text-card-foreground')
+      expect(card).toHaveClass('shadow-glass', 'hover:shadow-glass-hover', 'transition-all', 'duration-300')
+      expect(card).toHaveClass('hover:bg-white/15', 'border', 'border-white/10', 'group', 'relative')
     })
 
     it('should apply custom className', () => {
@@ -65,6 +66,7 @@ describe('Card Components', () => {
 
       const title = screen.getByTestId('card-title')
       expect(title).toHaveClass('text-2xl', 'font-semibold', 'leading-none', 'tracking-tight')
+      expect(title).toHaveClass('transition-all', 'duration-300', 'group-hover:scale-105', 'group-hover:italic', 'group-hover:text-primary')
     })
   })
 
@@ -82,6 +84,7 @@ describe('Card Components', () => {
 
       const description = screen.getByTestId('card-description')
       expect(description).toHaveClass('text-sm', 'text-muted-foreground')
+      expect(description).toHaveClass('transition-all', 'duration-300', 'group-hover:scale-102', 'group-hover:italic', 'group-hover:text-foreground/90')
     })
   })
 

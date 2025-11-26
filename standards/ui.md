@@ -140,17 +140,19 @@
 - **Color Tokens**: `foreground`, `foreground-muted`, `foreground-subtle`, `primary`, `secondary`, `warning`, `danger`
 - **Surfaces**: `surface`, `surface-elevated`, `surface-hover` with subtle borders
 - **Shadows**: multi-angle `shadow-dark-*`, floating `shadow-float`, glass `shadow-glass*`, and light `shadow-light-*`
-- **Glassmorphism**: `bg-white/5` + `backdrop-blur` + `border-white/10..20`
-- **Mesh Gradients**: subtle animated backgrounds (`bg-mesh-dark`, `bg-mesh-subtle`)
+- **Ultra-Light Glassmorphism**: Premium crystal glass with `bg-white/5` + `backdrop-blur-xl` (no borders for cleaner look)
+- **Custom Mesh Gradients**: darker animated background (`bg-mesh-custom-dark`) inspired by night sky themes
 - **Microinteractions**: `bounceSubtle`, `wiggle`, `liftHover`, `glowPulse`, `listHover`, `glassShimmer`, `meshFloat`
+- **Universal Hover Effects**: Global `.title-hover` and `.subtitle-hover` classes with scaling, italic styling, and mobile touch optimizations
 
 ### 🧭 Navigation
-- **Floating Sidebar** with borderless, glass style; active state glow; mobile hamburger with glass background
+- **Floating Sidebar** with ultra-light glass (`bg-white/5`, `backdrop-blur-xl`); individual hover backgrounds for nav items; active state with enhanced glass effect and italic styling; mobile-optimized touch interactions
 
 ### 🧩 Components
-- **Cards/Lists**: Hover lift, subtle background, glow; glass surfaces on focus/hover
+- **Cards/Lists**: Ultra-light crystal glass (`bg-white/5`, `backdrop-blur-xl`); borderless design; hover lift with glass-hover shadows; universal title/subtitle hover effects
 - **Badges**: Removed skill level badges for cleaner minimalism
 - **Forms**: Inputs use glass surfaces; buttons lift on hover; success/error states animated
+- **Contact**: Split into two separate glass cards (contact info + form)
 
 ### ♿ Accessibility Notes
 - Ensure `backdrop-blur` and low-opacity overlays maintain AA contrast with text

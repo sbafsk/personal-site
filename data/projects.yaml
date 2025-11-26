@@ -20,6 +20,15 @@ projects:
     status: "Active Development"
     type: "E-commerce Site"
 
+  - id: "creaciones-del-mago"
+    title: "Creaciones del Mago"
+    description: "Professional 3D printing e-commerce platform for Uruguay-focused custom orders and catalog. Features product showcase, custom order system, and professional service offerings."
+    tags: ["Next.js", "TypeScript", "E-commerce", "3D Printing", "TailwindCSS", "Custom Orders"]
+    liveUrl: "https://creaciones-del-mago.vercel.app/"
+    githubUrl: "https://github.com/sbafsk/creaciones-del-mago"
+    status: "Active Development"
+    type: "E-commerce Platform"
+
   - id: "personal-site"
     title: "Personal Portfolio (this site)"
     description: "Minimalistic personal portfolio website built with Next.js, TypeScript, and Tailwind CSS featuring dark theme and floating sidebar navigation."
@@ -48,6 +57,7 @@ status_types:
 project_types:
   full_stack: "Full-stack web applications"
   e_commerce: "E-commerce platforms"
+  e_commerce_platform: "Advanced e-commerce platforms with custom features"
   portfolio: "Personal portfolio sites"
   documentation: "Documentation and developer tools"
   development_kit: "Development kits and boilerplates"
