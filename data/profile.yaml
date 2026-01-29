@@ -1,13 +1,28 @@
 # Sebastián Pereira Rivero - Professional Profile
-# Last Updated: 2026-01-27
+# Last Updated: 2026-01-29
 
 name: "Sebastián Pereira Rivero"
 title: "Senior Full Stack Developer"
 location: "Montevideo, Uruguay"
+timezone: "UTC-3"
 email: "spereirarivero93@gmail.com"
-phone: "+598 98 900 649"
 linkedin: "https://www.linkedin.com/in/sebastian-pereira-rivero/"
 github: "https://github.com/sbafsk"
+
+# Career info
+careerStartYear: 2018
+
+# SEO & Metadata
+siteDescription: "Senior Full Stack Developer specializing in React, Next.js, TypeScript, and modern web development practices."
+keywords:
+  - "Full Stack Developer"
+  - "React"
+  - "Next.js"
+  - "TypeScript"
+  - "GraphQL"
+  - "Uruguay"
+  - "Software Engineer"
+  - "Ruby on Rails"
 
 summary: "Senior full stack developer focused on Ruby on Rails and React. Currently a Software Engineer at Hi Energy, building integrations and backend systems. Background spans automation, web development, and product delivery across startups and enterprise."
 

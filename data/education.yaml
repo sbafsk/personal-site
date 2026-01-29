@@ -1,91 +1,27 @@
-# Education and Continuous Learning
-# Last Updated: 2026-01-27
+# Education
+# Last Updated: 2026-01-29
 
 education_history:
   - id: "diploma"
     degree: "Diplomado en Dirección y Gestión de Empresas IT"
     institution: "European Open Business School"
     period: "2024 - 2025"
-    status: "completed"
-    description: |
-      A shift from purely technical work to understanding the business side of tech. Covered project and product
-      management, agile methodologies, AI and digital transformation, leadership, and data-driven decision making.
-      Helped see software from a different angle — not just how to build it, but how to manage teams, prioritize
-      strategically, and think about the bigger picture.
-    achievements:
-      - "Project and product management"
-      - "Agile methodologies"
-      - "AI and digital transformation"
-      - "Leadership and data-driven decisions"
-    relevance: "Good complement to engineering background for taking on more responsibility"
+    description: "Business side of tech: project management, agile, leadership."
 
   - id: "programmer"
     degree: "Analista Programador"
     institution: "Universidad ORT Uruguay"
     period: "2018 - 2022"
-    status: "completed"
-    description: |
-      A structured and complete education in software development. Learned how to think about systems, work in teams,
-      and follow methodologies that actually matter in the industry. Worked with JavaScript, React, REST APIs, and
-      version control — tools still used every day. Beyond the technical side, taught how to communicate ideas,
-      prioritize work, and lead when needed.
-    achievements:
-      - "Systems thinking"
-      - "Team collaboration"
-      - "JavaScript, React, REST APIs"
-      - "Version control and industry methodologies"
-    relevance: "Core technical foundation for development career"
+    description: "Software development fundamentals. JavaScript, React, REST APIs."
 
   - id: "webdesign"
     degree: "Diseñador Web"
-    institution: "INSTITUTO Escuela de Diseño y Comunicación BIOS"
+    institution: "INSTITUTO BIOS"
     period: "2015"
-    status: "completed"
-    description: |
-      A focused course on web design and development. Learned PHP and MySQL, which at the time felt like the keys
-      to building anything on the web. Hands-on and practical — less theory, more building things.
-      First step into backend development.
-    achievements:
-      - "PHP development"
-      - "MySQL databases"
-      - "Practical web building"
-    relevance: "First step into backend development"
+    description: "Web design and development. PHP, MySQL."
 
   - id: "highschool"
-    degree: "Bachillerato TI, Computer Engineering"
+    degree: "Bachillerato TI"
     institution: "Escuela Superior de Informatica"
     period: "2010 - 2014"
-    status: "completed"
-    description: |
-      First real exposure to programming and how computers actually work. Covered the basics — logic, hardware,
-      networking, and some early coding. Gave a foundation to build on and helped realize the path forward
-      in technology.
-    achievements:
-      - "Programming fundamentals"
-      - "Computer logic and hardware"
-      - "Networking basics"
-    relevance: "Early exposure to technology and systems thinking"
-
-# Continuous learning initiatives
-continuous_learning:
-  - area: "AI & Automation"
-    description: "Exploring emerging AI development practices"
-    tools: ["Cursor AI", "MCP", "BMAD"]
-    status: "active"
-
-  - area: "Modern Web Development"
-    description: "Staying current with latest frameworks and practices"
-    tools: ["Next.js 15", "React 18", "TypeScript 5"]
-    status: "active"
-
-  - area: "Business & Leadership"
-    description: "Developing business acumen for technical leadership"
-    focus: ["Project management", "Team leadership", "Strategic thinking"]
-    status: "active"
-
-# Learning goals for next 6 months
-learning_goals:
-  - "Master advanced TypeScript patterns"
-  - "Deep dive into GraphQL optimization"
-  - "Explore AI-assisted development workflows"
-  - "Study system design principles"
+    description: "First exposure to programming and computer systems."
