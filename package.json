@@ -30,10 +30,10 @@
     "clsx": "^2.1.1",
     "js-yaml": "^4.1.0",
     "lucide-react": "^0.542.0",
-    "next": "latest",
+    "next": "15.5.8",
     "rate-limiter-flexible": "^7.2.0",
-    "react": "latest",
-    "react-dom": "latest",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-hook-form": "^7.62.0",
     "tailwind-merge": "^3.3.1",
     "zod": "^4.1.5"
