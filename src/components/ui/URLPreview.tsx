@@ -1,88 +1,39 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { ExternalLink, Globe, Github } from 'lucide-react'
+
+interface ProjectPreview {
+    title: string
+    description: string
+}
 
 interface URLPreviewProps {
     url: string
     position: { x: number; y: number }
+    project?: ProjectPreview
 }
 
 interface PreviewData {
     title: string
     description: string
-    favicon?: string
     type: 'github' | 'website'
 }
 
-export function URLPreview({ url, position }: URLPreviewProps) {
-    const [previewData, setPreviewData] = useState<PreviewData | null>(null)
+export function URLPreview({ url, position, project }: URLPreviewProps) {
+    const isGitHub = url.includes('github.com')
 
-    useEffect(() => {
-        // Generate preview data based on the URL
-        const generatePreviewData = (url: string): PreviewData => {
-            if (url.includes('github.com')) {
-                if (url.includes('avent-properties')) {
-                    return {
-                        title: 'sbafsk/avent-properties',
-                        description: 'Luxury Real Estate Platform - Premium coastal properties in Uruguay for Dubai investors',
-                        type: 'github'
-                    }
-                } else if (url.includes('maicemita-site')) {
-                    return {
-                        title: 'sbafsk/maicemita-site',
-                        description: 'Artisanal Alfajores E-commerce - Traditional Argentine sweets online store',
-                        type: 'github'
-                    }
-                } else if (url.includes('mcp-documentation-hub')) {
-                    return {
-                        title: 'sbafsk/mcp-documentation-hub',
-                        description: 'MCP Documentation Hub - Comprehensive docs for Model Context Protocol',
-                        type: 'github'
-                    }
-                } else if (url.includes('personal-site')) {
-                    return {
-                        title: 'sbafsk/personal-site',
-                        description: 'Personal Portfolio - Minimalistic portfolio with Next.js, TypeScript, and Tailwind CSS',
-                        type: 'github'
-                    }
-                }
-                return {
-                    title: 'GitHub Repository',
-                    description: 'View source code and project details',
-                    type: 'github'
-                }
-            } else if (url.includes('avant-prop.vercel.app')) {
-                return {
-                    title: 'Avent Properties',
-                    description: 'Luxury coastal property in Uruguay - Connecting Dubai investors with premium real estate',
-                    type: 'website'
-                }
-            } else if (url.includes('maicemita-site.vercel.app')) {
-                return {
-                    title: 'Maicemita - Alfajores Artesanales',
-                    description: 'Traditional Argentine alfajores made with love and natural ingredients',
-                    type: 'website'
-                }
-            } else if (url.includes('personal-site') && url.includes('vercel.app')) {
-                return {
-                    title: 'Sebastián Pereira Rivero - Portfolio',
-                    description: 'Senior Full Stack Developer portfolio with minimalistic design and floating navigation',
-                    type: 'website'
-                }
-            }
-
-            return {
-                title: 'External Link',
-                description: 'Click to visit this website',
-                type: 'website'
-            }
+    // Generate preview data
+    const previewData: PreviewData = project
+        ? {
+            title: isGitHub ? url.split('github.com/')[1] ?? project.title : project.title,
+            description: project.description,
+            type: isGitHub ? 'github' : 'website'
         }
-
-        setPreviewData(generatePreviewData(url))
-    }, [url])
-
-    if (!previewData) return null
+        : {
+            title: isGitHub ? 'GitHub Repository' : 'External Link',
+            description: isGitHub ? 'View source code and project details' : 'Click to visit this website',
+            type: isGitHub ? 'github' : 'website'
+        }
 
     // Calculate position to keep popup in viewport
     const popupWidth = 320
@@ -93,11 +44,13 @@ export function URLPreview({ url, position }: URLPreviewProps) {
     let adjustedY = position.y - popupHeight - 16
 
     // Keep within viewport bounds
-    if (adjustedX + popupWidth > window.innerWidth - margin) {
-        adjustedX = position.x - popupWidth - 16
-    }
-    if (adjustedY < margin) {
-        adjustedY = position.y + 16
+    if (typeof window !== 'undefined') {
+        if (adjustedX + popupWidth > window.innerWidth - margin) {
+            adjustedX = position.x - popupWidth - 16
+        }
+        if (adjustedY < margin) {
+            adjustedY = position.y + 16
+        }
     }
 
     const Icon = previewData.type === 'github' ? Github : Globe

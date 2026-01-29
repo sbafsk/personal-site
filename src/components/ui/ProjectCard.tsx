@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ExternalLink, Github, Globe } from 'lucide-react'
+import { ExternalLink, Github } from 'lucide-react'
 import { URLPreview } from '@/components/ui/URLPreview'
 
 interface Project {
@@ -58,36 +58,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                         <p className="text-sm text-foreground-muted font-medium">
                             {project.type}
                         </p>
-                    </div>
-
-                    {/* Action Links */}
-                    <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                        {project.liveUrl && (
-                            <a
-                                href={project.liveUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="p-2 rounded-lg bg-primary/15 text-primary hover:bg-primary/25 border border-primary/20 hover:border-primary/30 transition-all duration-200 hover:scale-110 active:scale-95"
-                                onMouseEnter={(e) => handleLinkHover(project.liveUrl!, e)}
-                                onMouseLeave={handleLinkLeave}
-                                onMouseMove={handleMouseMove}
-                                aria-label={`Visit ${project.title} live site`}
-                            >
-                                <Globe className="w-4 h-4" />
-                            </a>
-                        )}
-                        <a
-                            href={project.githubUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="p-2 rounded-lg bg-surface/25 text-foreground hover:bg-surface/35 border border-border/30 hover:border-border/50 transition-all duration-200 hover:scale-110 active:scale-95"
-                            onMouseEnter={(e) => handleLinkHover(project.githubUrl, e)}
-                            onMouseLeave={handleLinkLeave}
-                            onMouseMove={handleMouseMove}
-                            aria-label={`View ${project.title} on GitHub`}
-                        >
-                            <Github className="w-4 h-4" />
-                        </a>
                     </div>
                 </div>
 
@@ -148,6 +118,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 <URLPreview
                     url={hoveredUrl}
                     position={mousePosition}
+                    project={{ title: project.title, description: project.description }}
                 />
             )}
         </>
