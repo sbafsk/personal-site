@@ -3,13 +3,14 @@ import { getProfile } from '@/lib/data-loader'
 import { MinimalLayout } from '@/components/layouts/MinimalLayout'
 import { ContactForm } from '@/app/components/ContactForm'
 
+const profile = getProfile()
+
 export const metadata: Metadata = {
-    title: 'Contact - Sebastián Pereira Rivero',
+    title: `Contact - ${profile.name}`,
     description: 'Get in touch for collaboration opportunities, questions, or just to connect.',
 }
 
 export default function ContactPage() {
-    const profile = getProfile()
 
     return (
         <MinimalLayout>
@@ -86,7 +87,7 @@ export default function ContactPage() {
                             </div>
                             <div className="flex items-center group/availability hover:bg-surface/20 hover:backdrop-blur-sm rounded-lg p-2 -mx-2 transition-all duration-300">
                                 <span className="inline-block w-2 h-2 rounded-full bg-warning mr-3 group-hover/availability:scale-110 transition-transform duration-300" />
-                                <span className="group-hover/availability:text-foreground-muted/90 transition-colors">Timezone: UTC-3 (Montevideo, Uruguay)</span>
+                                <span className="group-hover/availability:text-foreground-muted/90 transition-colors">Timezone: {profile.timezone} ({profile.location})</span>
                             </div>
                         </div>
                     </section>

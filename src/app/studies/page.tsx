@@ -1,9 +1,11 @@
 import { Metadata } from 'next'
-import { getEducation } from '@/lib/data-loader'
+import { getEducation, getProfile } from '@/lib/data-loader'
 import { MinimalLayout } from '@/components/layouts/MinimalLayout'
 
+const profile = getProfile()
+
 export const metadata: Metadata = {
-    title: 'Studies - Sebastián Pereira Rivero',
+    title: `Studies - ${profile.name}`,
     description: 'Academic background and educational journey in technology and business management.',
 }
 
@@ -47,7 +49,7 @@ export default function StudiesPage() {
                                         {study.description}
                                     </p>
 
-                                    {study.achievements.length > 0 && (
+                                    {study.achievements && study.achievements.length > 0 && (
                                         <div>
                                             <h3 className="text-sm font-medium text-foreground mb-2">
                                                 Key Learning Areas
@@ -65,11 +67,13 @@ export default function StudiesPage() {
                                         </div>
                                     )}
 
-                                    <div className="pt-2 border-t border-border">
-                                        <p className="text-xs text-foreground-subtle italic">
-                                            Relevance: {study.relevance}
-                                        </p>
-                                    </div>
+                                    {study.relevance && (
+                                        <div className="pt-2 border-t border-border">
+                                            <p className="text-xs text-foreground-subtle italic">
+                                                Relevance: {study.relevance}
+                                            </p>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </article>

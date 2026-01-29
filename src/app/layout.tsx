@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { FloatingSidebar } from '@/components/FloatingSidebar'
+import { getProfile } from '@/lib/data-loader'
 import './globals.css'
 
 const inter = Inter({
@@ -10,14 +11,16 @@ const inter = Inter({
   display: 'swap',
 })
 
+const profile = getProfile()
+
 export const metadata: Metadata = {
-  title: 'Sebastián Pereira Rivero - Senior Full Stack Developer',
-  description: 'Senior Full Stack Developer specializing in React, Next.js, TypeScript, and modern web development practices.',
-  keywords: ['Full Stack Developer', 'React', 'Next.js', 'TypeScript', 'GraphQL', 'Uruguay', 'Software Engineer'],
-  authors: [{ name: 'Sebastián Pereira Rivero' }],
+  title: `${profile.name} - ${profile.title}`,
+  description: profile.siteDescription,
+  keywords: profile.keywords,
+  authors: [{ name: profile.name }],
   openGraph: {
-    title: 'Sebastián Pereira Rivero - Senior Full Stack Developer',
-    description: 'Senior Full Stack Developer specializing in React, Next.js, TypeScript, and modern web development practices.',
+    title: `${profile.name} - ${profile.title}`,
+    description: profile.siteDescription,
     type: 'website',
     locale: 'en_US',
   },

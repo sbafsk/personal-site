@@ -1,6 +1,9 @@
 import { Section } from "../ui/Section"
 import { Button } from "../../../components/ui/button"
+import { getProfile } from "../../../lib/data-loader"
 import Link from "next/link"
+
+const profile = getProfile()
 
 export function CallToActionSection() {
     return (
@@ -20,7 +23,7 @@ export function CallToActionSection() {
                     </Button>
                     <Button asChild size="lg" variant="outline" className="min-h-[44px] text-white border-white hover:bg-white hover:text-blue-900">
                         <a
-                            href="https://github.com/sbafsk/"
+                            href={profile.github}
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="View my projects on GitHub (opens in new tab)"

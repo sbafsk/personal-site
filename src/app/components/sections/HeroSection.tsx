@@ -43,7 +43,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
             <div className="space-y-6">
               <p className="text-2xl leading-9 text-foreground font-semibold" role="doc-subtitle">
-                {profile.title} with 7+ years of experience
+                {profile.title}
               </p>
 
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

@@ -1,8 +1,9 @@
 import { MinimalLayout } from '@/components/layouts/MinimalLayout'
 import { ProjectCard } from '@/components/ui/ProjectCard'
-import { getProjects } from '@/lib/data-loader'
+import { getProjects, getProfile } from '@/lib/data-loader'
 
 const projects = getProjects()
+const profile = getProfile()
 
 export default function ProjectsPage() {
     return (
@@ -34,7 +35,7 @@ export default function ProjectsPage() {
                     <p className="text-sm text-foreground-muted text-center">
                         More projects coming soon. Check out my{' '}
                         <a
-                            href="https://github.com/sbafsk"
+                            href={profile.github}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-foreground hover:text-primary transition-colors"

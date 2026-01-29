@@ -1,9 +1,11 @@
 import { Metadata } from 'next'
-import { getWorkExperiences } from '@/lib/data-loader'
+import { getWorkExperiences, getProfile } from '@/lib/data-loader'
 import { MinimalLayout } from '@/components/layouts/MinimalLayout'
 
+const profile = getProfile()
+
 export const metadata: Metadata = {
-    title: 'Work - Sebastián Pereira Rivero',
+    title: `Work - ${profile.name}`,
     description: 'Professional experience and career journey in software development.',
 }
 
@@ -47,7 +49,7 @@ export default function WorkPage() {
                                         {experience.description}
                                     </p>
 
-                                    {experience.achievements.length > 0 && (
+                                    {experience.achievements && experience.achievements.length > 0 && (
                                         <div>
                                             <h3 className="text-sm font-medium text-foreground mb-2">
                                                 Key Achievements
@@ -69,7 +71,7 @@ export default function WorkPage() {
                                         </div>
                                     )}
 
-                                    {experience.technologies.length > 0 && (
+                                    {experience.technologies && experience.technologies.length > 0 && (
                                         <div>
                                             <h3 className="text-sm font-medium text-foreground mb-2">
                                                 Technologies
