@@ -60,10 +60,9 @@ export function CVDownloadSection() {
 
 ## ${profile.title}
 
-**Location:** ${profile.location}  
-**Email:** ${profile.email}  
-**Phone:** ${profile.phone}  
-**LinkedIn:** ${profile.linkedin}  
+**Location:** ${profile.location}
+**Email:** ${profile.email}
+${profile.phone ? `**Phone:** ${profile.phone}  \n` : ''}**LinkedIn:** ${profile.linkedin}
 **GitHub:** ${profile.github}
 
 ## Professional Summary
@@ -77,11 +76,10 @@ ${workExperiences.map(exp => `### ${exp.role} - ${exp.company}
 
 ${exp.description}
 
-**Technologies:** ${exp.technologies?.join(', ') || 'N/A'}  
-**Impact:** ${exp.impact}
-
-**Key Achievements:**
-${exp.achievements.map(achievement => `- ${achievement}`).join('\n')}
+**Technologies:** ${exp.technologies?.join(', ') ?? 'N/A'}
+${exp.impact ? `**Impact:** ${exp.impact}\n` : ''}
+${exp.achievements?.length ? `**Key Achievements:**
+${exp.achievements.map(achievement => `- ${achievement}`).join('\n')}` : ''}
 
 `).join('\n')}
 
@@ -100,11 +98,9 @@ ${education.map(edu => `### ${edu.degree}
 *${edu.institution} | ${edu.period}*
 
 ${edu.description}
-
-**Relevance:** ${edu.relevance}
-
-**Achievements:**
-${edu.achievements.map(achievement => `- ${achievement}`).join('\n')}
+${edu.relevance ? `\n**Relevance:** ${edu.relevance}` : ''}
+${edu.achievements?.length ? `\n**Achievements:**
+${edu.achievements.map(achievement => `- ${achievement}`).join('\n')}` : ''}
 
 `).join('\n')}
 
@@ -118,8 +114,7 @@ ${languages.map(lang => `- **${lang.name}**: ${lang.level} (${lang.proficiency})
 ## Contact
 
 - **Email:** ${profile.email}
-- **Phone:** ${profile.phone}
-- **Location:** ${profile.location}
+${profile.phone ? `- **Phone:** ${profile.phone}\n` : ''}- **Location:** ${profile.location}
 - **LinkedIn:** ${profile.linkedin}
 - **GitHub:** ${profile.github}
 
