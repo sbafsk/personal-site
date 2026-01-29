@@ -1,81 +1,159 @@
 # Professional Experience Data
-# Last Updated: 2025-09-03
+# Last Updated: 2026-01-27
 
 work_experiences:
+  - id: "hi-energy"
+    company: "Hi Energy"
+    role: "Software Integration Engineer"
+    location: "Remote"
+    period: "Jan 2026"
+    status: "current"
+    description: |
+      Focused on integrations, working with Ruby on Rails to connect the platform with affiliate marketing networks
+      and external services through REST APIs. The work involves understanding third-party systems, mapping data
+      between them, and making sure everything flows reliably. Also incorporating AI-assisted tools into the workflow.
+    technologies: ["Ruby on Rails", "REST APIs", "Integrations", "AI Tools"]
+    achievements:
+      - "Connected platform with affiliate marketing networks"
+      - "Built reliable third-party integrations"
+      - "Incorporated AI-assisted development tools"
+    impact: "Enabled seamless data flow between platform and external services"
+
+  - id: "trees-software"
+    company: "Trees Software"
+    role: "Founder"
+    location: "Montevideo, Uruguay"
+    period: "May 2024 - Present"
+    status: "current"
+    description: |
+      A small software operation handling everything from initial client conversations to architecture decisions
+      and hands-on development. Working on web applications using Next.js, Ruby on Rails, and other tools
+      depending on what fits the project. Beyond code — scoping work, managing expectations, and staying accountable.
+    technologies: ["Next.js", "Ruby on Rails", "React", "TypeScript"]
+    achievements:
+      - "Built web applications for clients"
+      - "Handled full project lifecycle"
+      - "Made architecture decisions independently"
+    impact: "Delivered complete software solutions from concept to deployment"
+
   - id: "mimiquate"
     company: "Mimiquate"
     role: "Software Engineer"
-    location: "Montevideo, Uruguay"
-    period: "January 2024 to April 2024"
+    location: "Remote"
+    period: "January 2024 - April 2024"
     status: "completed"
     description: |
-      Led the development of a project management tool using Elixir and Phoenix, focusing on rapid prototyping and robust backend architecture.
-      Mentored junior developers and conducted internal code reviews and technical presentations to improve team-wide technical skills and collaboration practices.
-      Enhanced collaboration practices.
-    technologies: ["Elixir", "Phoenix", "PostgreSQL", "NextJS", "React", "TypeScript"]
+      A short contract role working with Elixir and Phoenix for the first time. Got up to speed with a new stack
+      and contributed to a codebase built around functional programming principles. Also worked on React components
+      and GraphQL queries. Brief but gave exposure to a different way of thinking about backend architecture.
+    technologies: ["Elixir", "Phoenix", "React", "GraphQL", "TypeScript"]
     achievements:
-      - "Led project management tool development"
-      - "Mentored junior developers"
-      - "Improved team collaboration practices"
-    impact: "Enhanced team technical skills and collaboration"
+      - "Quickly onboarded to new tech stack"
+      - "Contributed to functional programming codebase"
+      - "Built React components and GraphQL queries"
+    impact: "Gained exposure to functional programming architecture"
 
   - id: "occupier"
     company: "Occupier"
-    role: "Frontend Engineer"
+    role: "Software Engineer"
     location: "Remote"
-    period: "October 2021 to August 2023"
+    period: "October 2021 - August 2023"
     status: "completed"
     description: |
-      Key contributor to a lease accounting SaaS used by over 5,000 daily users, delivering features that significantly improved user experience and client retention.
-      Led the migration of core data models from REST to GraphQL, improving application performance and developer efficiency.
-      Collaborated closely with product and design teams to prototype and validate new features, ensuring a user-centric approach from ideation to launch.
+      Full stack developer working on a lease accounting platform with a solid user base across the US.
+      Worked on both maintaining existing features and building new ones. Some features shipped came directly
+      from user requests, with visible impact on retention and sales conversations. Migrated parts of the backend
+      from REST to GraphQL, improving how the frontend consumed data and making development faster overall.
     technologies: ["Ruby on Rails", "React", "TypeScript", "GraphQL"]
     achievements:
-      - "Scaled SaaS to 5k+ daily users"
+      - "Shipped user-requested features"
       - "Led REST to GraphQL migration"
-      - "Improved application performance"
+      - "Improved frontend data consumption"
     impact: "Enhanced user experience and client retention"
 
-  - id: "basf"
-    company: "BASF Services America"
-    role: "RPA Developer"
+  - id: "career-break"
+    company: "Professional Development"
+    role: "Career Break"
     location: "Montevideo, Uruguay"
-    period: "January 2020 to August 2020"
+    period: "2020 - 2021"
     status: "completed"
     description: |
-      Automated complex financial workflows, resulting in annual savings of over 500 hours of manual labor.
-      Developed automation bots that reduced financial closing times from one week to just a few hours.
-    technologies: ["UiPath", "Automation", "Financial Systems"]
+      After short stints at Deloitte and Overactive, took time to shift career toward web development.
+      Studied React and Node.js through online courses and personal projects. Teamed up with friends
+      to take on freelance work, gaining real-world experience building web apps from scratch.
+      A reset that set the direction for the next phase of the career.
+    technologies: ["React", "Node.js", "JavaScript", "Web Development"]
     achievements:
-      - "Automated financial workflows"
-      - "Reduced closing times from 1 week to hours"
-    impact: "Saved 500+ hours annually"
+      - "Self-taught React and Node.js"
+      - "Built freelance web applications"
+      - "Transitioned from RPA to web development"
+    impact: "Successfully pivoted career direction"
+
+  - id: "basf"
+    company: "BASF"
+    role: "SSr RPA Developer"
+    location: "Remote (Germany)"
+    period: "January 2020 - August 2020"
+    status: "completed"
+    description: |
+      Step up in complexity, joining a global team based in Germany to work on automations for internal clients
+      across different departments. Main project was a bot handling monthly account closings that integrated
+      directly with SAP, running multiple instances in parallel and communicating with internal APIs.
+      Required more coordination, stricter code reviews, and better understanding of enterprise systems.
+    technologies: ["UiPath", "SAP", "APIs", "Automation"]
+    achievements:
+      - "Built SAP-integrated automation bot"
+      - "Implemented parallel processing"
+      - "Worked with international team"
+    impact: "Automated monthly account closings for enterprise"
 
   - id: "intermedia"
     company: "Intermedia"
     role: "RPA Developer"
     location: "Montevideo, Uruguay"
-    period: "November 2018 to December 2019"
+    period: "November 2018 - December 2019"
     status: "completed"
     description: |
-      Developed over 30 automation bots across multiple departments, improving efficiency and reducing manual tasks.
-      Supported the company's transition to agile methodology (Scrum), helping improve team-wide collaboration.
+      Proper automation work involving the full cycle: analyzing manual processes, figuring out what could be
+      automated, building the bots, and deploying them. The company was going through an agile transformation,
+      so gained hands-on experience with Scrum and learned how to work in sprints and collaborate with stakeholders.
     technologies: ["UiPath", "Agile", "Scrum", "Automation"]
     achievements:
-      - "Developed 30+ automation bots"
-      - "Supported agile transition"
-    impact: "Improved team collaboration"
+      - "Handled full automation lifecycle"
+      - "Participated in agile transformation"
+      - "Collaborated with stakeholders"
+    impact: "Made genuine difference in people's daily work"
 
   - id: "asignet"
-    company: "Asignet"
+    company: "Asignet Technology DNA"
     role: "Script Developer"
     location: "Montevideo, Uruguay"
-    period: "September 2016 to November 2018"
+    period: "September 2016 - November 2018"
     status: "completed"
     description: |
-      Created over 100 invoice scripts and 40 parsers for data extraction, significantly improving data processing capabilities.
-    technologies: ["Scripting", "Data Processing", "Automation"]
+      First tech job working on a system that automated invoice downloads and data extraction.
+      Wrote scripts that pulled invoices from different sources and built parsers to read and store
+      the relevant data. Gave a strong foundation in scripting, problem-solving, and understanding
+      how data flows through systems.
+    technologies: ["Scripting", "Data Processing", "Automation", "Parsers"]
     achievements:
-      - "Created 100+ invoice scripts"
-      - "Built 40+ data parsers"
+      - "Automated invoice downloads"
+      - "Built data extraction parsers"
+      - "Learned data flow systems"
     impact: "Improved data processing capabilities"
+
+  - id: "pre-tech"
+    company: "Disco | Florial | Uber"
+    role: "Cashier | Driver | Delivery"
+    location: "Montevideo, Uruguay"
+    period: "Before 2016"
+    status: "completed"
+    description: |
+      Before entering tech, worked several customer-facing jobs. These roles taught how to deal with people,
+      manage time, and stay organized under pressure. Solid groundwork for what came next.
+    technologies: ["Customer Service", "Time Management"]
+    achievements:
+      - "Developed people skills"
+      - "Learned time management"
+      - "Built pressure handling ability"
+    impact: "Foundation for professional communication"

@@ -1,5 +1,5 @@
 # Projects Portfolio
-# Last Updated: 2025-01-27
+# Last Updated: 2026-01-28
 
 projects:
   - id: "avent-properties"
@@ -20,6 +20,15 @@ projects:
     status: "Active Development"
     type: "E-commerce Site"
 
+  - id: "creaciones-del-mago"
+    title: "Creaciones del Mago"
+    description: "Professional 3D printing e-commerce platform for Uruguay-focused custom orders and catalog. Features product showcase, custom order system, and professional service offerings."
+    tags: ["Next.js", "TypeScript", "E-commerce", "3D Printing", "TailwindCSS", "Custom Orders"]
+    liveUrl: "https://creacionesdelmago.com/"
+    githubUrl: "https://github.com/sbafsk/creaciones-del-mago"
+    status: "Live"
+    type: "E-commerce Platform"
+
   - id: "personal-site"
     title: "Personal Portfolio (this site)"
     description: "Minimalistic personal portfolio website built with Next.js, TypeScript, and Tailwind CSS featuring dark theme and floating sidebar navigation."
@@ -36,6 +45,49 @@ projects:
     githubUrl: "https://github.com/sbafsk/ai-assistant-development-kit"
     status: "Active Development"
     type: "Development Kit"
+
+# --- Commented Projects (not displayed) ---
+
+#  - id: "task-tracker"
+#    title: "Task Tracker"
+#    description: "Task management application for organizing and tracking work items."
+#    tags: ["HTML", "CSS", "JavaScript"]
+#    githubUrl: "https://github.com/sbafsk/task-tracker"
+#    status: "Active Development"
+#    type: "Web Application"
+
+#  - id: "trees-landing"
+#    title: "Trees Landing"
+#    description: "Landing page project built with TypeScript."
+#    tags: ["TypeScript", "Web Design"]
+#    githubUrl: "https://github.com/sbafsk/trees-landing"
+#    status: "Active Development"
+#    type: "Landing Page"
+
+#  - id: "supap-front"
+#    title: "Supap Front"
+#    description: "Frontend application built with TypeScript."
+#    tags: ["TypeScript", "React", "TailwindCSS"]
+#    liveUrl: "https://supap-front.vercel.app/"
+#    githubUrl: "https://github.com/sbafsk/supap-front"
+#    status: "Active Development"
+#    type: "Web Application"
+
+#  - id: "harm-reduction-website"
+#    title: "Harm Reduction Website"
+#    description: "Informational website focused on harm reduction resources and support."
+#    tags: ["Next.js", "TypeScript", "TailwindCSS"]
+#    liveUrl: "https://v0-harm-reduction-website.vercel.app/"
+#    status: "Active Development"
+#    type: "Informational Site"
+
+#  - id: "refugio-aldea-infinita"
+#    title: "Refugio Aldea Infinita"
+#    description: "Website for Refugio Aldea Infinita project."
+#    tags: ["Next.js", "TypeScript", "TailwindCSS"]
+#    liveUrl: "https://v0-refugio-aldea-infinita.vercel.app/"
+#    status: "Active Development"
+#    type: "Informational Site"
 
 # Project status types
 status_types:
