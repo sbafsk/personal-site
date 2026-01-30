@@ -1,5 +1,5 @@
 # Projects Portfolio
-# Last Updated: 2025-01-27
+# Last Updated: 2026-01-29
 
 projects:
   - id: "avent-properties"
@@ -20,22 +20,77 @@ projects:
     status: "Active Development"
     type: "E-commerce Site"
 
+  - id: "creaciones-del-mago"
+    title: "Creaciones del Mago"
+    description: "Professional 3D printing e-commerce platform for Uruguay-focused custom orders and catalog. Features product showcase, custom order system, and professional service offerings."
+    tags: ["Next.js", "TypeScript", "E-commerce", "3D Printing", "TailwindCSS", "Custom Orders"]
+    liveUrl: "https://creacionesdelmago.com/"
+    githubUrl: "https://github.com/sbafsk/creaciones-del-mago"
+    status: "Active Development"
+    type: "E-commerce Platform"
+
   - id: "personal-site"
     title: "Personal Portfolio (this site)"
     description: "Minimalistic personal portfolio website built with Next.js, TypeScript, and Tailwind CSS featuring dark theme and floating sidebar navigation."
     tags: ["Next.js", "TypeScript", "TailwindCSS", "Responsive Design", "Accessibility"]
     liveUrl: "https://personal-site-lpwaqlv2j-sbafsks-projects.vercel.app/"
     githubUrl: "https://github.com/sbafsk/personal-site"
-    status: "Live"
+    status: "Active Development"
     type: "Portfolio Site"
 
-  - id: "mcp-documentation-hub"
-    title: "AI Assistant Development Kit"
-    description: "A collection of boilerplates and patterns for building AI-enhanced development environments. Features project templates, documentation architecture, and MCP integration for AI coding assistants like Cursor, Claude, and GitHub Copilot."
-    tags: ["Next.js", "TypeScript", "Elixir", "Phoenix", "Flutter", "MCP", "AI Tools", "Boilerplates", "Documentation"]
-    githubUrl: "https://github.com/sbafsk/ai-assistant-development-kit"
+
+
+# --- Commented Projects (not displayed) ---
+
+#  - id: "task-tracker"
+#    title: "Task Tracker"
+#    description: "Task management application for organizing and tracking work items."
+#    tags: ["HTML", "CSS", "JavaScript"]
+#    githubUrl: "https://github.com/sbafsk/task-tracker"
+#    status: "Active Development"
+#    type: "Web Application"
+
+  # - id: "mcp-documentation-hub"
+  #   title: "AI Assistant Development Kit"
+  #   description: "A collection of boilerplates and patterns for building AI-enhanced development environments. Features project templates, documentation architecture, and MCP integration for AI coding assistants like Cursor, Claude, and GitHub Copilot."
+  #   tags: ["Next.js", "TypeScript", "Elixir", "Phoenix", "Flutter", "MCP", "AI Tools", "Boilerplates", "Documentation"]
+  #   githubUrl: "https://github.com/sbafsk/ai-assistant-development-kit"
+  #   status: "Active Development"
+  #   type: "Development Kit"
+
+  - id: "trees-landing"
+    title: "Trees Software"
+    description: "Corporate landing page for Trees Software, a Uruguay-based software development studio. Showcases web development, mobile apps, SaaS platforms, and e-commerce solutions for Latin American businesses."
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "Landing Page", "Corporate", "Responsive Design"]
+    liveUrl: "https://v0-trees-software-landing-page.vercel.app/"
+    githubUrl: "https://github.com/sbafsk/trees-landing"
     status: "Active Development"
-    type: "Development Kit"
+    type: "Landing Page"
+
+  - id: "supap-front"
+    title: "SUPAP Uruguay"
+    description: "Web platform for SUPAP (Sociedad Uruguaya de Psicoterapias Asistidas por Psicodélicos), featuring professional training programs, clinical research opportunities, consulting services, and educational resources on psychedelic-assisted mental health therapies."
+    tags: ["Next.js", "TypeScript", "React", "TailwindCSS", "Healthcare", "Education", "Membership Platform"]
+    liveUrl: "https://supap-front.vercel.app/"
+    githubUrl: "https://github.com/sbafsk/supap-front"
+    status: "Active Development"
+    type: "Institutional Platform"
+
+  - id: "harm-reduction-website"
+    title: "Al Espacio Despacio"
+    description: "Harm reduction platform for Al Espacio Despacio, a Uruguayan organization focused on nightlife safety. Features educational infographics, substance interaction guides, event services information, and community resources for responsible consumption in recreational settings."
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "Healthcare", "Education", "Harm Reduction", "Responsive Design"]
+    liveUrl: "https://v0-harm-reduction-website.vercel.app/"
+    status: "Active Development"
+    type: "Educational Platform"
+
+  - id: "refugio-aldea-infinita"
+    title: "Refugio Aldea Infinita"
+    description: "Website for a holistic retreat center in Cabo Polonio, Uruguay. Features accommodation booking (cabins and geodesic domes), therapeutic consultation services, event listings, and integration with social media and messaging platforms."
+    tags: ["Next.js", "TypeScript", "TailwindCSS", "Booking", "Tourism", "Wellness", "Responsive Design"]
+    liveUrl: "https://v0-refugio-aldea-infinita.vercel.app/"
+    status: "Active Development"
+    type: "Booking Platform"
 
 # Project status types
 status_types:

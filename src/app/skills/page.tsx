@@ -1,14 +1,17 @@
 import { Metadata } from 'next'
-import { getSkills } from '@/lib/data-loader'
+import { getSkills, getProfile } from '@/lib/data-loader'
 import { MinimalLayout } from '@/components/layouts/MinimalLayout'
 
+const profile = getProfile()
+
 export const metadata: Metadata = {
-    title: 'Skills - Sebastián Pereira Rivero',
+    title: `Skills - ${profile.name}`,
     description: 'Technical skills and expertise across frontend, backend, and modern development practices.',
 }
 
 export default function SkillsPage() {
     const skillCategories = getSkills()
+    const yearsOfExperience = new Date().getFullYear() - profile.careerStartYear
 
 
     return (
@@ -19,7 +22,7 @@ export default function SkillsPage() {
                         Skills
                     </h1>
                     <p className="text-base text-foreground-muted leading-relaxed">
-                        Technical expertise developed over 7+ years in software development and automation.
+                        Technical expertise developed over {yearsOfExperience}+ years in software development and automation.
                     </p>
                 </div>
 

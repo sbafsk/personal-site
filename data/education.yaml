@@ -1,63 +1,27 @@
-# Education and Continuous Learning
-# Last Updated: 2025-09-03
+# Education
+# Last Updated: 2026-01-29
 
 education_history:
   - id: "diploma"
-    degree: "IT Business Management Diploma"
+    degree: "Diplomado en Dirección y Gestión de Empresas IT"
     institution: "European Open Business School"
-    period: "Completed August 2025"
-    status: "completed"
-    description: "Comprehensive program covering business management principles in the IT sector"
-    achievements:
-      - "Business management fundamentals"
-      - "IT sector applications"
-      - "Strategic planning skills"
-    relevance: "Enhances business acumen for technical leadership roles"
+    period: "2024 - 2025"
+    description: "Business side of tech: project management, agile, leadership."
 
   - id: "programmer"
-    degree: "Programmer Analyst"
+    degree: "Analista Programador"
     institution: "Universidad ORT Uruguay"
-    period: "2018 – 2020"
-    status: "completed"
-    description: "Technical degree in software development and programming"
-    achievements:
-      - "Software development fundamentals"
-      - "Programming best practices"
-      - "System analysis skills"
-    relevance: "Core technical foundation for development career"
+    period: "2018 - 2022"
+    description: "Software development fundamentals. JavaScript, React, REST APIs."
+
+  - id: "webdesign"
+    degree: "Diseñador Web"
+    institution: "INSTITUTO BIOS"
+    period: "2015"
+    description: "Web design and development. PHP, MySQL."
 
   - id: "highschool"
-    degree: "IT High School (Bachillerato)"
-    institution: "ESI Buceo"
-    period: "2010 – 2014"
-    status: "completed"
-    description: "High school education with focus on information technology"
-    achievements:
-      - "IT fundamentals"
-      - "Problem-solving skills"
-      - "Technical mindset development"
-    relevance: "Early exposure to technology and systems thinking"
-
-# Continuous learning initiatives
-continuous_learning:
-  - area: "AI & Automation"
-    description: "Exploring emerging AI development practices"
-    tools: ["Cursor AI", "MCP", "BMAD"]
-    status: "active"
-    
-  - area: "Modern Web Development"
-    description: "Staying current with latest frameworks and practices"
-    tools: ["Next.js 15", "React 18", "TypeScript 5"]
-    status: "active"
-    
-  - area: "Business & Leadership"
-    description: "Developing business acumen for technical leadership"
-    focus: ["Project management", "Team leadership", "Strategic thinking"]
-    status: "active"
-
-# Learning goals for next 6 months
-learning_goals:
-  - "Master advanced TypeScript patterns"
-  - "Deep dive into GraphQL optimization"
-  - "Explore AI-assisted development workflows"
-  - "Study system design principles"
+    degree: "Bachillerato TI"
+    institution: "Escuela Superior de Informatica"
+    period: "2010 - 2014"
+    description: "First exposure to programming and computer systems."

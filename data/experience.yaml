@@ -1,81 +1,75 @@
-# Professional Experience Data
-# Last Updated: 2025-09-03
+# Professional Experience
+# Last Updated: 2026-01-29
 
 work_experiences:
+  - id: "hi-energy"
+    company: "Hi Energy"
+    role: "Software Integration Engineer"
+    location: "Remote"
+    period: "Jan 2026"
+    status: "current"
+    description: "Building integrations with affiliate marketing networks and external services."
+    technologies: ["Ruby on Rails", "REST APIs", "Integrations"]
+
+  - id: "trees-software"
+    company: "Trees Software"
+    role: "Founder"
+    location: "Montevideo, Uruguay"
+    period: "May 2024 - Present"
+    status: "current"
+    description: "Small software studio handling web applications from scoping to deployment."
+    technologies: ["Next.js", "Ruby on Rails", "React", "TypeScript"]
+
   - id: "mimiquate"
     company: "Mimiquate"
     role: "Software Engineer"
     location: "Montevideo, Uruguay"
-    period: "January 2024 to April 2024"
+    period: "January 2024 - April 2024"
     status: "completed"
-    description: |
-      Led the development of a project management tool using Elixir and Phoenix, focusing on rapid prototyping and robust backend architecture.
-      Mentored junior developers and conducted internal code reviews and technical presentations to improve team-wide technical skills and collaboration practices.
-      Enhanced collaboration practices.
-    technologies: ["Elixir", "Phoenix", "PostgreSQL", "NextJS", "React", "TypeScript"]
-    achievements:
-      - "Led project management tool development"
-      - "Mentored junior developers"
-      - "Improved team collaboration practices"
-    impact: "Enhanced team technical skills and collaboration"
+    description: "Short contract working with Elixir, Phoenix, and React."
+    technologies: ["Elixir", "Phoenix", "React", "GraphQL"]
 
   - id: "occupier"
     company: "Occupier"
-    role: "Frontend Engineer"
+    role: "Software Engineer"
     location: "Remote"
-    period: "October 2021 to August 2023"
+    period: "October 2021 - August 2023"
     status: "completed"
-    description: |
-      Key contributor to a lease accounting SaaS used by over 5,000 daily users, delivering features that significantly improved user experience and client retention.
-      Led the migration of core data models from REST to GraphQL, improving application performance and developer efficiency.
-      Collaborated closely with product and design teams to prototype and validate new features, ensuring a user-centric approach from ideation to launch.
+    description: "Full stack work on a lease accounting platform. Migrated parts of the backend from REST to GraphQL."
     technologies: ["Ruby on Rails", "React", "TypeScript", "GraphQL"]
-    achievements:
-      - "Scaled SaaS to 5k+ daily users"
-      - "Led REST to GraphQL migration"
-      - "Improved application performance"
-    impact: "Enhanced user experience and client retention"
+
+  - id: "career-break"
+    company: "Career Break"
+    role: "Self-directed learning"
+    location: "Montevideo, Uruguay"
+    period: "2020 - 2021"
+    status: "completed"
+    description: "Shifted from RPA to web development. Studied React and Node.js, did freelance work."
+    technologies: ["React", "Node.js", "JavaScript"]
 
   - id: "basf"
-    company: "BASF Services America"
+    company: "BASF"
     role: "RPA Developer"
-    location: "Montevideo, Uruguay"
-    period: "January 2020 to August 2020"
+    location: "Remote (Germany)"
+    period: "January 2020 - August 2020"
     status: "completed"
-    description: |
-      Automated complex financial workflows, resulting in annual savings of over 500 hours of manual labor.
-      Developed automation bots that reduced financial closing times from one week to just a few hours.
-    technologies: ["UiPath", "Automation", "Financial Systems"]
-    achievements:
-      - "Automated financial workflows"
-      - "Reduced closing times from 1 week to hours"
-    impact: "Saved 500+ hours annually"
+    description: "Built automation bots for a global team, including SAP integrations."
+    technologies: ["UiPath", "SAP", "APIs"]
 
   - id: "intermedia"
     company: "Intermedia"
     role: "RPA Developer"
     location: "Montevideo, Uruguay"
-    period: "November 2018 to December 2019"
+    period: "November 2018 - December 2019"
     status: "completed"
-    description: |
-      Developed over 30 automation bots across multiple departments, improving efficiency and reducing manual tasks.
-      Supported the company's transition to agile methodology (Scrum), helping improve team-wide collaboration.
-    technologies: ["UiPath", "Agile", "Scrum", "Automation"]
-    achievements:
-      - "Developed 30+ automation bots"
-      - "Supported agile transition"
-    impact: "Improved team collaboration"
+    description: "Full automation cycle: analyzing processes, building bots, deploying."
+    technologies: ["UiPath", "Agile", "Scrum"]
 
   - id: "asignet"
-    company: "Asignet"
+    company: "Asignet Technology DNA"
     role: "Script Developer"
     location: "Montevideo, Uruguay"
-    period: "September 2016 to November 2018"
+    period: "September 2016 - November 2018"
     status: "completed"
-    description: |
-      Created over 100 invoice scripts and 40 parsers for data extraction, significantly improving data processing capabilities.
+    description: "First tech job. Automated invoice downloads and built data extraction parsers."
     technologies: ["Scripting", "Data Processing", "Automation"]
-    achievements:
-      - "Created 100+ invoice scripts"
-      - "Built 40+ data parsers"
-    impact: "Improved data processing capabilities"

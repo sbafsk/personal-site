@@ -7,15 +7,19 @@ export interface Profile {
   name: string
   title: string
   location: string
+  timezone: string
   email: string
-  phone: string
+  phone?: string
   linkedin: string
   github: string
+  careerStartYear: number
+  siteDescription: string
+  keywords: string[]
   summary: string
   bio: string
   tagline: string
   subtitle: string
-  highlights: string[]
+  highlights?: string[]
 }
 
 export interface WorkExperience {
@@ -26,9 +30,9 @@ export interface WorkExperience {
   period: string
   status: string
   description: string
-  technologies: string[]
-  achievements: string[]
-  impact: string
+  technologies?: string[]
+  achievements?: string[]
+  impact?: string
 }
 
 export interface SkillCategory {
@@ -47,10 +51,10 @@ export interface Education {
   degree: string
   institution: string
   period: string
-  status: string
+  status?: string
   description: string
-  achievements: string[]
-  relevance: string
+  achievements?: string[]
+  relevance?: string
 }
 
 export interface Language {

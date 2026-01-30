@@ -19,10 +19,14 @@ const mockProfile = {
   name: 'John Doe',
   title: 'Senior Frontend Developer',
   location: 'San Francisco, CA',
+  timezone: 'UTC-8',
   email: 'john@example.com',
   phone: '+1-555-0123',
   linkedin: 'https://linkedin.com/in/johndoe',
   github: 'https://github.com/johndoe',
+  careerStartYear: 2018,
+  siteDescription: 'Senior Frontend Developer specializing in React and TypeScript.',
+  keywords: ['Frontend Developer', 'React', 'TypeScript'],
   summary: 'Experienced developer passionate about creating amazing user experiences',
   bio: 'I am a passionate developer with over 7 years of experience building scalable web applications.',
   tagline: 'Building exceptional digital experiences with modern technologies',
@@ -40,7 +44,7 @@ describe('HeroSection', () => {
     render(<HeroSection />)
 
     expect(screen.getByRole('heading', { level: 1, name: mockProfile.name })).toBeInTheDocument()
-    expect(screen.getByText(`${mockProfile.title} with 7+ years of experience`)).toBeInTheDocument()
+    expect(screen.getByText(mockProfile.title)).toBeInTheDocument()
     expect(screen.getByText(mockProfile.tagline)).toBeInTheDocument()
     expect(screen.getByText(mockProfile.subtitle)).toBeInTheDocument()
   })
@@ -56,7 +60,7 @@ describe('HeroSection', () => {
     render(<HeroSection profile={customProfile} />)
 
     expect(screen.getByRole('heading', { level: 1, name: 'Jane Smith' })).toBeInTheDocument()
-    expect(screen.getByText('Full Stack Developer with 7+ years of experience')).toBeInTheDocument()
+    expect(screen.getByText('Full Stack Developer')).toBeInTheDocument()
     expect(screen.getByText('Custom tagline for testing')).toBeInTheDocument()
   })
 
